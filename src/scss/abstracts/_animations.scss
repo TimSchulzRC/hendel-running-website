@@ -1,0 +1,25 @@
+@use "colors";
+
+@keyframes wiggle {
+    0% {
+        border-radius: 61% 39% 54% 46% / 59% 51% 49% 41%;
+    }
+
+    25% {
+        border-radius: 36% 64% 53% 47% / 44% 51% 49% 56%;
+    }
+
+    50% {
+        border-radius: 52% 48% 65% 35% / 46% 46% 54% 54%;
+    }
+
+    25% {
+        border-radius: 47% 53% 48% 52% / 52% 39% 61% 48%;
+    }
+
+    100% {
+        border-radius: 61% 39% 54% 46% / 59% 51% 49% 41%;
+    }
+}
+    
+$blob-gradient: linear-gradient(to right top, colors.$orange, colors.$yellow);

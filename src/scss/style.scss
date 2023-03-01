@@ -1,0 +1,118 @@
+@use "bootstrap";
+@use "abstracts/animations";
+@use "abstracts/colors";
+
+$navbar-height: 70px;
+$large-spacing: 50px;
+$text-padding: 70px;
+
+:root {
+    color-scheme: dark;
+}
+
+html {
+}
+
+html, body{
+    overflow-x: hidden;
+    background-color: colors.$base-color;
+    color:#fff;
+}
+
+nav {
+    background-color: colors.$base-color;
+    height: $navbar-height;
+}
+
+.row {
+    --bs-gutter-x: 10rem;
+}
+
+
+.blob {
+    z-index: 2;
+    position: relative;
+    &:after {
+        content: "";
+        background-image: animations.$blob-gradient;
+        filter: drop-shadow(5px 5px 10px colors.$orange);
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        animation: wiggle 20s infinite;
+    }
+
+}
+
+section {
+    position: relative;
+    z-index: 3;
+    &:first-child {
+        margin-top: -$navbar-height - 50px;
+        padding-top: $navbar-height + 50px;
+    }
+    &.blob {
+        &:after {
+            transform: scaleY(1.2);
+            transform: translateY(-15%);
+            @include bootstrap.media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+    }
+}
+
+#section2{
+    height: 500px;
+}
+
+
+.blob-left {
+    &:after {
+        right: 50%;
+    }
+}
+
+.blob-right {
+    &:after {
+        left: 50%;
+    }
+}
+
+.blob-bottom {
+    &:after {
+        top: 20%;
+    }
+}
+
+.content {
+    align-items: stretch;
+    display: flex;
+    align-items: center;
+    .text {
+        padding-top: $text-padding;
+        padding-bottom: $text-padding;
+    }
+    .image {
+        height: 100%;
+        img {
+            object-fit: cover;
+            object-position: top;
+            height: 500px;
+            width: 100%;
+        }
+    }
+    .blob {
+        overflow-y: hidden;
+        &:after {
+            // left: $large-spacing;
+            // width: calc(100% - $large-spacing * 2);
+            transform: scale(0.9);
+            // transform: rotate(deg);
+            // display: none;
+        }
+    }
+}
