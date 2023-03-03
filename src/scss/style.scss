@@ -1,118 +1,145 @@
 @use "bootstrap";
 @use "abstracts/animations";
 @use "abstracts/colors";
+@use "abstracts/sizes";
+@use "navbar";
 
-$navbar-height: 70px;
-$large-spacing: 50px;
-$text-padding: 70px;
 
 :root {
     color-scheme: dark;
 }
 
-html {
-}
-
 html, body{
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: colors.$base-color;
     color:#fff;
 }
 
-nav {
-    background-color: colors.$base-color;
-    height: $navbar-height;
+body {
+    height: 100vh;
+    overflow-y: auto;
+    perspective: 100px;
+    -webkit-perspective: 100px;
+}
+
+.container {
+    @include bootstrap.media-breakpoint-up(lg) {
+        max-width: 960px;
+    }
 }
 
 .row {
     --bs-gutter-x: 10rem;
+    align-items: center;
+}
+
+@mixin blob {
+    content: "";
+    background-image: animations.$blob-gradient;
+    box-shadow: 0px 0px 20px 2px rgba(colors.$orange, 0.9);
+    -webkit-box-shadow: 0px 0px 20px 2px rgba(colors.$orange, 0.9);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+    z-index: -1;
+    animation: wiggle 20s infinite;
 }
 
 
 .blob {
-    z-index: 2;
     position: relative;
     &:after {
-        content: "";
-        background-image: animations.$blob-gradient;
-        filter: drop-shadow(5px 5px 10px colors.$orange);
-        position: absolute;
-        top:0;
-        left:0;
-        height: 100%;
-        width: 100%;
-        z-index: -1;
-        animation: wiggle 20s infinite;
-    }
-
-}
-
-section {
-    position: relative;
-    z-index: 3;
-    &:first-child {
-        margin-top: -$navbar-height - 50px;
-        padding-top: $navbar-height + 50px;
-    }
-    &.blob {
-        &:after {
-            transform: scaleY(1.2);
-            transform: translateY(-15%);
-            @include bootstrap.media-breakpoint-down(md) {
-                display: none;
-            }
-        }
+        @include blob;
     }
 }
-
-#section2{
-    height: 500px;
-}
-
 
 .blob-left {
     &:after {
-        right: 50%;
+        width: 200%;
+        left: -100%
     }
 }
 
 .blob-right {
     &:after {
-        left: 50%;
+        width: 200%;
+        right: -100%;
     }
 }
 
 .blob-bottom {
     &:after {
-        top: 20%;
+        top: 25%;
     }
 }
 
-.content {
-    align-items: stretch;
+.text {
+    padding-top: sizes.$text-padding;
+    padding-bottom: sizes.$text-padding;
+}
+
+header {
+    position: relative;
+    z-index: -1;
+    margin-bottom: -10px;
     display: flex;
     align-items: center;
-    .text {
-        padding-top: $text-padding;
-        padding-bottom: $text-padding;
-    }
-    .image {
-        height: 100%;
-        img {
-            object-fit: cover;
-            object-position: top;
-            height: 500px;
-            width: 100%;
+    transform-style: preserve-3d;
+    &.blob {
+        &:after {
+            transform: translateZ(-25px) scale(1.25) translateX(50%) translateY(-10%);
+            height: 150%;
+            top: auto;
+            @include bootstrap.media-breakpoint-down(md) {
+                display: none;
+            }
         }
     }
+
+
     .blob {
         overflow-y: hidden;
         &:after {
-            // left: $large-spacing;
-            // width: calc(100% - $large-spacing * 2);
-            transform: scale(0.9);
-            // transform: rotate(deg);
-            // display: none;
+            width: 80%;
+            left: 10%;
+        }
+        .image {
+            height: 100%;
+            img {
+                object-fit: cover;
+                object-position: top;
+                width: 100%; 
+                height: sizes.$image-height;  
+            }
         }
     }
+    .row {
+        transform: translateZ(-10px) scale(1.1) ;
+    }
+}
+
+
+section {
+    display: flex;
+    position: relative;
+        .row {
+            .image {
+                display: flex;
+                img {
+                    object-fit: cover;
+                    object-position: top;
+                    width: auto;
+                    max-height: sizes.$image-height;
+            }
+        }
+    }
+}
+
+
+
+#section1 {
+    background: colors.$base-color;
+    height: sizes.$image-height;
 }

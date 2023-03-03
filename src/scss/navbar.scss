@@ -1,0 +1,8 @@
+@use "abstracts/colors";
+@use "abstracts/sizes";
+@use "bootstrap";
+
+nav {
+    background-color: colors.$base-color;
+    min-height: sizes.$navbar-height;
+}
