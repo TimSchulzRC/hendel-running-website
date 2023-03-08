@@ -1,4 +1,5 @@
 @use "colors";
+@use "bootstrap";
 
 @keyframes wiggle {
     0% {
@@ -23,3 +24,37 @@
 }
     
 $blob-gradient: linear-gradient(to right top, colors.$orange, colors.$yellow);
+
+.hidden {
+    opacity: 0;
+    transition: all 0.5s;
+    &.right, &.left {
+        filter: blur(5px);
+    }
+    &.right {
+        transform: translateX(100%);
+    }
+    &.left {
+        transform: translateX(-100%);
+    }
+}
+
+.show {
+    &.right, &.left {
+        transform: translateX(0);
+        filter: blur(0);
+    }
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+@include bootstrap.media-breakpoint-down(md){
+    .hide-on-mobile {
+        display: none !important;
+    }
+}

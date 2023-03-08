@@ -10,14 +10,14 @@
 }
 
 html, body{
-    overflow: hidden;
     background-color: colors.$base-color;
     color:#fff;
 }
 
+
 body {
+    overflow-x: hidden;
     height: 100vh;
-    overflow-y: auto;
     perspective: 100px;
     -webkit-perspective: 100px;
 }
@@ -39,17 +39,19 @@ body {
     box-shadow: 0px 0px 20px 2px rgba(colors.$orange, 0.9);
     -webkit-box-shadow: 0px 0px 20px 2px rgba(colors.$orange, 0.9);
     position: absolute;
-    top: 20px;
-    left: 20px;
-    height: calc(100% - 40px);
-    width: calc(100% - 40px);
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
     z-index: -1;
-    animation: wiggle 20s infinite;
+    border-radius: 61% 39% 54% 46% / 59% 51% 49% 41%;
+    // animation: wiggle 20s infinite;
 }
 
 
 .blob {
     position: relative;
+    z-index: 1;
     &:after {
         @include blob;
     }
@@ -69,6 +71,12 @@ body {
     }
 }
 
+.blob-top {
+    &:after {
+        top: -25%;
+    }
+}
+
 .blob-bottom {
     &:after {
         top: 25%;
@@ -83,22 +91,19 @@ body {
 header {
     position: relative;
     z-index: -1;
-    margin-bottom: -10px;
     display: flex;
     align-items: center;
-    transform-style: preserve-3d;
     &.blob {
         &:after {
-            transform: translateZ(-25px) scale(1.25) translateX(50%) translateY(-10%);
+            object-fit: cover;
             height: 150%;
             top: auto;
+            left: 50%;
             @include bootstrap.media-breakpoint-down(md) {
                 display: none;
             }
         }
     }
-
-
     .blob {
         overflow-y: hidden;
         &:after {
@@ -115,15 +120,15 @@ header {
             }
         }
     }
-    .row {
-        transform: translateZ(-10px) scale(1.1) ;
-    }
 }
 
 
 section {
     display: flex;
-    position: relative;
+    margin-bottom: sizes.$large-spacing;
+    &:last-child {
+        padding-bottom: sizes.$large-spacing;
+    }
         .row {
             .image {
                 display: flex;
@@ -137,9 +142,63 @@ section {
     }
 }
 
+.sponsors {
+    background: colors.$base-color-secondary;
+    padding: sizes.$large-spacing 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .row {
+        &.blob-row {
+            overflow: hidden;
+            z-index: -1;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            .blob {
+                height: 100%;
+                &.blob-left, &.blob-right {
+                    &:after {
+                        height: 60%;
+                        top: 20%;
+                    }
+                }
+                &.blob-left {
+                    &:after {
+                        left: -150%;
+                    }
+                }
+                &.blob-right {
+                    &:after {
+                        left: auto;
+                        right: -150%;
+                    }
+                }
+            }
+        }
+        --bs-gutter-x: 1rem;
+        --bs-gutter-y: 1rem;
+        .image {
+            border-radius: sizes.$border-radius;
+            height: 200px;
+            background: rgba($color: #fff, $alpha: 0.5);
+            backdrop-filter: blur(10px);
+            img{
+                object-fit: contain;
+                object-position: center;
+                
+            }
+        }
+    }
+}
 
-
-#section1 {
-    background: colors.$base-color;
-    height: sizes.$image-height;
+footer {
+    height: 1px;
 }
