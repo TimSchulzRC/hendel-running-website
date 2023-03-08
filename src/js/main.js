@@ -4,8 +4,8 @@ import "../scss/style.scss";
 //* Scroll Timeline Animation for Sponsors
 import "./scroll-timeline";
 
-const first = document.querySelector(".sponsor-row-1");
-const second = document.querySelector(".sponsor-row-2");
+const first = document.querySelectorAll(".sponsor-row-1");
+const second = document.querySelectorAll(".sponsor-row-2");
 
 const scrollTimeLine = new ScrollTimeline({
   source: document.scrollingElement,
@@ -18,12 +18,16 @@ const secondAnimation = {
   transform: ["translateX(10%)", "translateX(-10%)"],
 };
 
-first.animate(firstAnimation, {
-  timeline: scrollTimeLine,
-});
-second.animate(secondAnimation, {
-  timeline: scrollTimeLine,
-});
+first.forEach((element) =>
+  element.animate(firstAnimation, {
+    timeline: scrollTimeLine,
+  })
+);
+second.forEach((element) =>
+  element.animate(secondAnimation, {
+    timeline: scrollTimeLine,
+  })
+);
 
 // Observer Animation
 const animatedImages = document.querySelectorAll(".animate-image");
