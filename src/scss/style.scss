@@ -137,6 +137,15 @@ section {
                     object-position: top;
                     width: auto;
                     max-height: sizes.$image-height;
+                    @include bootstrap.media-breakpoint-down(md) {
+                        max-height: sizes.$image-height-md;
+                    }
+                    @include bootstrap.media-breakpoint-down(lg) {
+                        max-height: sizes.$image-height-lg;
+                    }
+                    @include bootstrap.media-breakpoint-down(xl) {
+                        max-height: sizes.$image-height-xl;
+                    }
             }
         }
     }

@@ -1,5 +1,6 @@
 import "bootstrap";
 import "../scss/style.scss";
+import "./router";
 
 //* Scroll Timeline Animation for Sponsors
 import "./scroll-timeline";
@@ -30,10 +31,7 @@ second.forEach((element) =>
 );
 
 // Observer Animation
-const animatedImages = document.querySelectorAll(".animate-image");
-const animatedText = document.querySelectorAll(".animate-text");
-
-const animatedElements = [...animatedImages, ...animatedText];
+const animatedElements = document.querySelectorAll(".animate");
 
 animatedElements.forEach((image) => {
   image.classList.add("hidden");

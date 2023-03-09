@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="icon" type="image/svg+xml" href="/assets/logo-036de00a.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   
-  <title>Vite App</title>
-  <script type="module" crossorigin src="/assets/index-2bd4e89f.js"></script>
-  <link rel="stylesheet" href="/assets/index-7883b4a5.css">
+  <title>Hendel Running</title>
+  <script type="module" crossorigin src="/assets/main-60c89c08.js"></script>
+  <link rel="stylesheet" href="/assets/main-361220ed.css">
 </head>
 
 <body>
@@ -26,7 +26,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Über uns</a>
+            <a class="nav-link" href="about-us.html" onclick="route()">Über uns</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Kristina</a>
@@ -39,11 +39,11 @@
     </div>
   </nav>
 
-  <main>
+  <main id="app">
     <header class="container blob">
       <div class="row">
         <div class="col-sm-12 col-md-6">
-          <div class="text animate-text left">
+          <div class="text animate left">
             <h1>Gemeinsam nach Paris</h1>
             <p>
               Jeder Sportler träumt von einem Start bei Olympischen Spielen. Kristina und Sebastian
@@ -56,7 +56,7 @@
           </div>
         </div>
         <div class="col-sm-12 col-md-6 blob blob-bottom">
-          <div class="image animate-image">
+          <div class="image animate">
             <img class="img-fluid" src="/assets/008_ret-sw-c69cc66b.png"
               alt="Kristina und Sebastian Hendel Seite an Seite im Trainingsanzug">
           </div>
@@ -69,40 +69,75 @@
         <div class="row sponsor-row-1">
           <div class="col-4">
             <div class="image">
-              <img src="/assets/cropped-DATEC-Ideen-rund-um-dokumente-b09e1072.png" alt=""
-                class="img-fluid">
+              <img src="/assets/datec-e12c754d.svg" alt="" class="img-fluid">
             </div>
           </div>
           <div class="col-4">
             <div class="image">
-              <img src="/assets/cropped-DATEC-Ideen-rund-um-dokumente-b09e1072.png" alt=""
-                class="img-fluid">
+              <img src="/assets/datec-e12c754d.svg" alt="" class="img-fluid">
             </div>
           </div>
           <div class="col-4">
             <div class="image">
-              <img src="/assets/cropped-DATEC-Ideen-rund-um-dokumente-b09e1072.png" alt=""
-                class="img-fluid">
+              <img src="/assets/datec-e12c754d.svg" alt="" class="img-fluid">
             </div>
           </div>
         </div>
         <div class="row sponsor-row-2">
           <div class="col-4">
             <div class="image">
-              <img src="/assets/cropped-DATEC-Ideen-rund-um-dokumente-b09e1072.png" alt=""
-                class="img-fluid">
+              <img src="/assets/datec-e12c754d.svg" alt="" class="img-fluid">
             </div>
           </div>
           <div class="col-4">
             <div class="image">
-              <img src="/assets/cropped-DATEC-Ideen-rund-um-dokumente-b09e1072.png" alt=""
-                class="img-fluid">
+              <img src="/assets/datec-e12c754d.svg" alt="" class="img-fluid">
             </div>
           </div>
           <div class="col-4">
             <div class="image">
-              <img src="/assets/cropped-DATEC-Ideen-rund-um-dokumente-b09e1072.png" alt=""
-                class="img-fluid">
+              <img src="/assets/datec-e12c754d.svg" alt="" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sponsors hide-on-desktop">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="image animate left">
+              <img src="/assets/datec-e12c754d.svg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="image animate right">
+              <img src="/assets/datec-e12c754d.svg" alt="" class="img-fluid">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="image animate left">
+              <img src="/assets/datec-e12c754d.svg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="image animate right">
+              <img src="/assets/datec-e12c754d.svg" alt="" class="img-fluid">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="image animate left">
+              <img src="/assets/datec-e12c754d.svg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="image animate right">
+              <img src="/assets/datec-e12c754d.svg" alt="" class="img-fluid">
             </div>
           </div>
         </div>
@@ -111,12 +146,13 @@
 
     <section class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-6 order-2 order-md-1 blob blob-left image">
-          <img class="img-fluid animate-image" src="/assets/114_ret-sw-28b32f5a.png"
+        <div
+          class="col-sm-12 col-md-6 order-2 order-md-1 blob blob-left image justify-content-center justify-content-md-start">
+          <img class="img-fluid animate" src="/assets/114_ret-sw-28b32f5a.png"
             alt="Kristina und Sebastian Hendel nebeneinander im Laufschritt Ganzkörperaufnahme">
         </div>
         <div class="col-sm-12 col-md-6 order-1 order-md-2">
-          <div class="text animate-text right">
+          <div class="text animate right">
             <h2>Seit 2015 unzertrennlich</h2>
             <p>
               Kristian und Sebastian Hendel lernten sich 2015 beim Sportstudium in New York kennen
@@ -135,7 +171,7 @@
     <section class="container">
       <div class="row">
         <div class="col-sm-12 col-md-6">
-          <div class="text animate-text left">
+          <div class="text animate left">
             <h2>Kristina Hendel</h2>
             <p>
               ...gehört von Kindesbeinen an zu den besten Läuferinnen ihres Heimatlandes Kroatien.
@@ -148,7 +184,7 @@
         </div>
         <div
           class="col-sm-12 col-md-6 blob blob-right image justify-content-center justify-content-md-end">
-          <img class="img-fluid animate-image" src="/assets/011_ret-sw-9cdefac3.png"
+          <img class="img-fluid animate" src="/assets/011_ret-sw-9cdefac3.png"
             alt="Kristina Hendel im Trainingsanzug Ganzkörperaufnahme">
         </div>
       </div>
@@ -157,12 +193,12 @@
     <section class="container">
       <div class="row">
         <div
-          class="col-sm-12 col-md-6 blob blob-left image justify-content-center justify-content-md-start">
-          <img class="img-fluid animate-image" src="/assets/017_ret-sw-bb9db266.png"
+          class="col-sm-12 col-md-6 order-2 order-md-1 blob blob-left image justify-content-center justify-content-md-start">
+          <img class="img-fluid animate" src="/assets/017_ret-sw-bb9db266.png"
             alt="Sebastian Hendel im Trainingsanzug Ganzkörperaufnahme">
         </div>
-        <div class="col-sm-12 col-md-6">
-          <div class="text animate-text right">
+        <div class="col-sm-12 order-1 order-md-2 col-md-6">
+          <div class="text animate right">
             <h2>Sebastian Hendel</h2>
             <p>
               ...verdankt seinen Namen einem ganz Großen der Leichtathletik. Dass der Reichenbacher
