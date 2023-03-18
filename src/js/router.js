@@ -3,8 +3,12 @@ import animate from "./animation/animate";
 const route = (event) => {
   event = event || window.event;
   event.preventDefault();
-  window.history.pushState({}, "", event.target.href);
+  window.history.pushState({}, "", getPathOrHome(event));
   handleLocationChange();
+};
+
+const getPathOrHome = (event) => {
+  return event.target.tagName === "A" ? event.target.href : "/";
 };
 
 const routes = {
