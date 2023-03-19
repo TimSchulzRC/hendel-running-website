@@ -1,1 +1,0 @@
-import"../scss/style.scss";import animate from"./animation/animate";animate();
