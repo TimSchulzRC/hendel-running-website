@@ -6,7 +6,7 @@ let htmlPageNames = ["sebastian", "about-us"];
 let multipleHtmlPlugins = htmlPageNames.map((name) => {
   console.log(name);
   return new HtmlWebpackPlugin({
-    template: `./src/${name}.html`, // relative path to the HTML files
+    template: `./src/pages/${name}.html`, // relative path to the HTML files
     filename: `${name}.html`, // output HTML files
     chunks: ["commons", `${name}`], // respective JS and SCSS files
   });
@@ -14,8 +14,13 @@ let multipleHtmlPlugins = htmlPageNames.map((name) => {
 
 module.exports = {
   entry: {
-    commons: ["bootstrap", path.resolve(__dirname, "src/scss/style.scss")],
+    commons: [
+      "bootstrap",
+      path.resolve(__dirname, "src/scss/subpage.scss"),
+      path.resolve(__dirname, "src/scss/style.scss"),
+    ],
     index: path.resolve(__dirname, "src/js/main.js"),
+    sebastian: [path.resolve(__dirname, "src/scss/sebastian.scss")],
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -74,7 +79,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: "Hendel Running",
-      template: path.resolve(__dirname, "src/index.html"),
+      template: path.resolve(__dirname, "src/pages/index.html"),
       filename: "index.html",
     }),
   ].concat(multipleHtmlPlugins),

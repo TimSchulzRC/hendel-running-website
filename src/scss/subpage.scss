@@ -1,8 +1,59 @@
-.subpage-header {
-    height: 100px;
-    background-color: red;
-}
+@use "bootstrap";
+@use "abstracts/sizes";
+@use "abstracts/colors";
 
-.test{
-    color: #fff;
+.subpage {
+    .image, img {
+        max-height: 100% !important;
+    }
+
+    header {
+        height: sizes.$image-height;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-position: top;
+        background-size: cover;
+        background-blend-mode: darken;
+        margin-top: calc(sizes.$navbar-height * -1);
+        position: relative;
+        z-index: -1;
+        .container {
+            text-align: center;
+            padding-top: sizes.$navbar-height;
+            padding-bottom: sizes.$large-spacing;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: end;
+            letter-spacing: 5px;
+            h2 {
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                font-weight: 300;
+            }
+            h1 {
+                font-size: 5rem;
+                font-weight: 500;
+                @include bootstrap.media-breakpoint-down(lg) {
+                    font-size: 3rem;
+                }
+                @include bootstrap.media-breakpoint-down(md) {
+                    font-size: 2rem;
+                }
+                .fName {
+                    background: linear-gradient(colors.$orange, colors.$orange, colors.$yellow);
+                    background-clip: text;
+                    color: transparent;
+                }
+                .lName {
+                    color: colors.$yellow;
+                }
+            }
+        }
+            
+    }
+    
+    .test{
+        color: #fff;
+    }
 }

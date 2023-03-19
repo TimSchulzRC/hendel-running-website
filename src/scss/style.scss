@@ -2,8 +2,8 @@
 @use "abstracts/animations";
 @use "abstracts/colors";
 @use "abstracts/sizes";
+@use "abstracts/fonts";
 @use "navbar";
-@use "subpage";
 
 
 :root {
@@ -13,6 +13,7 @@
 html, body{
     background-color: colors.$base-color;
     color:#fff;
+    font-family: "Roboto", sans-serif;
 }
 
 
