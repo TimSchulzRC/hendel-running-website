@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 
-let htmlPageNames = ["sebastian", "about-us"];
+let htmlPageNames = ["sebastian", "kristina", "about-us"];
 let multipleHtmlPlugins = htmlPageNames.map((name) => {
   console.log(name);
   return new HtmlWebpackPlugin({
@@ -21,6 +21,8 @@ module.exports = {
     ],
     index: path.resolve(__dirname, "src/js/main.js"),
     sebastian: [path.resolve(__dirname, "src/scss/sebastian.scss")],
+    kristina: [path.resolve(__dirname, "src/scss/kristina.scss")],
+    "about-us": [path.resolve(__dirname, "src/scss/about-us.scss")],
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -34,7 +36,11 @@ module.exports = {
       directory: path.join(__dirname, "dist"),
     },
     port: 3000,
-    open: true,
+    open: {
+      app: {
+        name: "Google Chrome",
+      },
+    },
     hot: true,
     compress: true,
     historyApiFallback: true,
