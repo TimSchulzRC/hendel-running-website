@@ -54,7 +54,7 @@ $blob-gradient: linear-gradient(to right top, colors.$orange, colors.$yellow);
 }
 
 .hide-on-mobile {
-    @include bootstrap.media-breakpoint-down(md){
+    @include bootstrap.media-breakpoint-down(lg){
         display: none !important;
     }
 }

@@ -1,3 +1,4 @@
+import "./scroll-timeline.js";
 export default function animateSponsorsOnScroll() {
   const first = document.querySelectorAll(".sponsor-row-1");
   const second = document.querySelectorAll(".sponsor-row-2");

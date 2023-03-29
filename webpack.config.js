@@ -2,7 +2,14 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 
-let htmlPageNames = ["sebastian", "kristina", "about-us"];
+let htmlPageNames = [
+  "sebastian",
+  "kristina",
+  "about-us",
+  "contact",
+  "privacy-policy",
+  "legal-details",
+];
 let multipleHtmlPlugins = htmlPageNames.map((name) => {
   console.log(name);
   return new HtmlWebpackPlugin({
@@ -17,6 +24,7 @@ module.exports = {
     commons: [
       "bootstrap",
       path.resolve(__dirname, "src/scss/subpage.scss"),
+      path.resolve(__dirname, "src/scss/infopage.scss"),
       path.resolve(__dirname, "src/scss/style.scss"),
     ],
     index: path.resolve(__dirname, "src/js/main.js"),

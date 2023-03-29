@@ -14,11 +14,11 @@ html, body{
     background-color: colors.$base-color;
     color:#fff;
     font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
 }
 
 
 body {
-    overflow-x: hidden;
     height: 100vh;
     perspective: 100px;
     -webkit-perspective: 100px;
@@ -124,9 +124,6 @@ body {
 section {
     display: flex;
     margin-bottom: sizes.$large-spacing;
-    &:last-child {
-        padding-bottom: sizes.$large-spacing;
-    }
     .row {
         .image {
             display: flex;
@@ -193,5 +190,12 @@ section {
 }
 
 footer {
-    height: 1px;
+    padding: sizes.$large-spacing 0;
+    .logo {
+        height: sizes.$navbar-height;
+    }
+    .nav-link {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

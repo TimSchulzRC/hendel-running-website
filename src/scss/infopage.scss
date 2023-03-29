@@ -1,0 +1,12 @@
+@use "bootstrap";
+@use "abstracts/sizes";
+@use "abstracts/colors";
+
+.infopage {
+    padding: sizes.$text-padding 0 0 0;
+    section {
+        display: block;
+        margin: 0;
+        padding: sizes.$text-padding 0 0 0;
+    }
+}
