@@ -9,6 +9,15 @@
     color: transparent;
 }
 
+@include bootstrap.media-breakpoint-down(md) {
+    .navbar-nav {
+        padding-bottom: sizes.$navbar-height;
+        li {
+            text-align: center;
+        }
+    }
+}
+
 .subpage {
     .image, img {
         max-height: calc(100vh - sizes.$large-spacing) !important;
@@ -19,6 +28,7 @@
             max-height: sizes.$image-height-lg !important;
         }
     }
+
 
     header {
         height: sizes.$image-height;

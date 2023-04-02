@@ -14,7 +14,9 @@ html, body{
     background-color: colors.$base-color;
     color:#fff;
     font-family: "Roboto", sans-serif;
-    overflow-x: hidden;
+    @include bootstrap.media-breakpoint-down(md) {
+        overflow-x: hidden;
+    }
 }
 
 
@@ -22,6 +24,7 @@ body {
     height: 100vh;
     perspective: 100px;
     -webkit-perspective: 100px;
+    overflow-x: hidden;
 }
 
 .row {
@@ -37,6 +40,7 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
+    aspect-ratio: 1 1;
     height: 100%;
     width: 100%;
     z-index: -1;
@@ -50,22 +54,6 @@ body {
     z-index: 1;
     &:after {
         @include blob;
-    }
-}
-
-.blob-left {
-    &:after {
-        // width: 125%;
-        // left: -25%;
-        // right: unset;
-    }
-}
-
-.blob-right {
-    &:after {
-        // width: 125%;
-        // right: -25%;
-        // left: unset;
     }
 }
 

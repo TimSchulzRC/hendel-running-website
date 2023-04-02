@@ -5,4 +5,84 @@
 nav {
     background-color: colors.$base-color;
     min-height: sizes.$navbar-height;
+    font-size: larger;
+
+    @include bootstrap.media-breakpoint-down(md) {
+        font-size: x-large;
+    }
+
+    ul {
+        @include bootstrap.media-breakpoint-up(md) {
+            gap: sizes.$nav-item-spacing;
+        }
+    }
+
+    .navbar-brand {
+        margin-right: sizes.$nav-item-spacing;
+    }
+
+    .navbar-toggler {
+        position: relative;
+    }
+
+    .navbar-toggler,
+    .navbar-toggler:focus,
+    .navbar-toggler:active {
+        outline: none;
+        box-shadow: none;
+        border: 0;
+    }
+
+    .navbar-toggler {
+        span {
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-bar {
+            margin-top: 0;
+            transform: rotate(135deg);
+        }
+
+        .middle-bar {
+            margin-top: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+
+        .bottom-bar {
+            margin-top: 0;
+            transform: rotate(-135deg);
+        }
+    }
+
+    .toggler-icon {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: #99a09a;
+        border-radius: 1px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+    }
+
+    .navbar-toggler.collapsed {
+        .top-bar {
+            margin-top: -20px;
+            transform: rotate(0deg);
+        }
+
+        .middle-bar {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+
+        .bottom-bar {
+            margin-top: 20px;
+            transform: rotate(0deg);
+        }
+    }
 }
