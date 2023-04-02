@@ -20,15 +20,10 @@
 
 .subpage {
     .image, img {
-        max-height: calc(100vh - sizes.$large-spacing) !important;
-        @include bootstrap.media-breakpoint-down(md) {
-            max-height: sizes.$image-height-md !important;
-        }
-        @include bootstrap.media-breakpoint-down(lg) {
-            max-height: sizes.$image-height-lg !important;
-        }
+        position: sticky;
+        top: calc(sizes.$large-spacing / 2);
+        margin: sizes.$text-padding 0;
     }
-
 
     header {
         height: sizes.$image-height;

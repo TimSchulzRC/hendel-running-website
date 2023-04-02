@@ -25,6 +25,10 @@ body {
     perspective: 100px;
     -webkit-perspective: 100px;
     overflow-x: hidden;
+    &:after {
+        display: none;
+        content: url("../assets/img/nw_221009_11_10_48-3.jpeg") url("../assets/img/IMG_5249.jpeg") url("../assets/img/K_Hendel_2022 6.jpeg") url("../assets/img/K_Hendel_2022\ 7_upscale.jpeg") url("../assets/img/ueber_uns_header.jpeg");
+    }
 }
 
 .row {
@@ -40,9 +44,8 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
-    aspect-ratio: 1 1;
     height: 100%;
-    width: 100%;
+    aspect-ratio: 10 / 8;
     z-index: -1;
     border-radius: 61% 39% 54% 46% / 59% 51% 49% 41%;
     // animation: wiggle 20s infinite;
@@ -51,10 +54,27 @@ body {
 
 .blob {
     position: relative;
-    z-index: 1;
+    display: flex;
+    align-items: center;
     &:after {
         @include blob;
     }
+}
+
+.blob-left {
+    &:after {
+        left: auto;
+        right: sizes.$large-spacing;
+    };
+    justify-content: start;
+}
+
+.blob-right {
+    &:after {
+        left: sizes.$large-spacing;
+        right: auto;
+    }
+    justify-content: end;
 }
 
 .blob-top {
@@ -178,7 +198,7 @@ section {
 }
 
 footer {
-    padding: sizes.$large-spacing 0;
+    padding-bottom: sizes.$large-spacing;
     .logo {
         height: sizes.$navbar-height;
     }
