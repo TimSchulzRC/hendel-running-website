@@ -11,7 +11,7 @@
 <body>
   <nav class="navbar navbar-expand-md navbar-dark bg-transparent">
     <div class="container">
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand" href="/" aria-label="Logo with link to the home page">
         <img src="../assets/svg/logo.svg" width="40" height="40" alt="">
       </a>
       <button
@@ -39,10 +39,24 @@
   </nav>
 
   <main id="index">
-    <header class="header header-home container blob">
+    <header>
+      <div class="container">
+        <h2>Vom Ungeplanten Glück</h2>
+        <h1><span class="fName">Kristina & Sebastian</span> <span class="lName">Hendel</span></h1>
+      </div>
+    </header>
+
+
+
+    <section class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <div class="text animate left">
+        <div
+          class="col-sm-12 col-md-6 order-2 order-md-1 blob blob-left image justify-content-center">
+          <img class="img-fluid animate" src="../assets/img/no-bg/114_ret-sw.webp"
+            alt="Kristina und Sebastian Hendel nebeneinander im Laufschritt, Ganzkörperaufnahme">
+        </div>
+        <div class="col-sm-12 col-md-6 order-1 order-md-2">
+          <div class="text animate right">
             <h1>Gemeinsam nach Paris</h1>
             <p>
               Jeder Sportler träumt von einem Start bei Olympischen Spielen. Kristina und
@@ -54,106 +68,6 @@
               Olympia 2024
               in Paris ist ihr großes Ziel.
             </p>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-6 blob blob-bottom">
-          <div class="image animate">
-            <img class="img-fluid" src="../assets/img/no-bg/008_ret-sw.png"
-              alt="Kristina und Sebastian Hendel Seite an Seite im Trainingsanzug">
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <section class="sponsors hide-on-mobile">
-      <div class="container">
-        <div class="row sponsor-row-1">
-          <div class="col-4">
-            <div class="image">
-              <img src="../assets/svg/sponsors/datec.svg" alt="" class="img-fluid">
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="image">
-              <img src="../assets/svg/sponsors/datec.svg" alt="" class="img-fluid">
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="image">
-              <img src="../assets/svg/sponsors/datec.svg" alt="" class="img-fluid">
-            </div>
-          </div>
-        </div>
-        <div class="row sponsor-row-2">
-          <div class="col-4">
-            <div class="image">
-              <img src="../assets/svg/sponsors/datec.svg" alt="" class="img-fluid">
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="image">
-              <img src="../assets/svg/sponsors/datec.svg" alt="" class="img-fluid">
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="image">
-              <img src="../assets/svg/sponsors/datec.svg" alt="" class="img-fluid">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="sponsors hide-on-desktop">
-      <div class="container">
-        <div class="row">
-          <div class="col-6">
-            <div class="image animate left">
-              <img src="../assets/svg/sponsors/datec.svg" alt="" class="img-fluid">
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="image animate right">
-              <img src="../assets/svg/sponsors/datec.svg" alt="" class="img-fluid">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <div class="image animate left">
-              <img src="../assets/svg/sponsors/datec.svg" alt="" class="img-fluid">
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="image animate right">
-              <img src="../assets/svg/sponsors/datec.svg" alt="" class="img-fluid">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <div class="image animate left">
-              <img src="../assets/svg/sponsors/datec.svg" alt="" class="img-fluid">
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="image animate right">
-              <img src="../assets/svg/sponsors/datec.svg" alt="" class="img-fluid">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container">
-      <div class="row">
-        <div
-          class="col-sm-12 col-md-6 order-2 order-md-1 blob blob-left image justify-content-center">
-          <img class="img-fluid animate" src="../assets/img/no-bg/114_ret-sw.png"
-            alt="Kristina und Sebastian Hendel nebeneinander im Laufschritt, Ganzkörperaufnahme">
-        </div>
-        <div class="col-sm-12 col-md-6 order-1 order-md-2">
-          <div class="text animate right">
             <h2>Seit 2015 unzertrennlich</h2>
             <p>
               Kristian und Sebastian Hendel lernten sich 2015 beim Sportstudium in New
@@ -165,6 +79,7 @@
               Hürden zu
               überwinden.
             </p>
+            <a href="about-us.html" class="btn btn-lg">Mehr Erfahren</a>
           </div>
         </div>
       </div>
@@ -184,10 +99,11 @@
               werden auch ihre
               Erfolgsstrecken.
             </p>
+            <a href="kristina.html" class="btn btn-lg">Mehr Erfahren</a>
           </div>
         </div>
         <div class="col-sm-12 col-md-6 blob blob-right image justify-content-center">
-          <img class="img-fluid animate" src="../assets/img/no-bg/011_ret-sw.png"
+          <img class="img-fluid animate" src="../assets/img/no-bg/011_ret-sw.webp"
             alt="Kristina Hendel im Trainingsanzug, Ganzkörperaufnahme">
         </div>
       </div>
@@ -197,7 +113,7 @@
       <div class="row">
         <div
           class="col-sm-12 col-md-6 order-2 order-md-1 blob blob-left image justify-content-center justify-content-md-center">
-          <img class="img-fluid animate" src="../assets/img/no-bg/017_ret-sw.png"
+          <img class="img-fluid animate" src="../assets/img/no-bg/017_ret-sw.webp"
             alt="Sebastian Hendel im Trainingsanzug, Ganzkörperaufnahme">
         </div>
         <div class="col-sm-12 order-1 order-md-2 col-md-6">
@@ -212,10 +128,42 @@
               kaum
               vorstellen.
             </p>
+            <a href="sebastian.html" class="btn btn-lg">Mehr Erfahren</a>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="sponsors">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-lg-3">
+            <div class="image">
+              <img src="../assets/svg/sponsors/stadtwerke.svg" alt="Logo der Stadtwerke Reichenbach"
+                class="img-fluid">
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="image">
+              <img src="../assets/svg/sponsors/datec.svg" alt="Logo von Datec" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="image">
+              <img src="../assets/svg/sponsors/sponser.svg" alt="Logo von Sponser"
+                class="img-fluid">
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="image">
+              <img src="../assets/svg/sponsors/mietens.svg" alt="Logo von Mietens"
+                class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>

@@ -1,0 +1,10 @@
+@use "abstracts/sizes";
+#index{
+    header {
+        background-image: url("../assets/img/home_header.webp");
+        background-position: top;
+    }
+    p {
+        padding: 0 0 sizes.$text-padding;
+    }
+}

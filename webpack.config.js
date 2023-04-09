@@ -27,7 +27,10 @@ module.exports = {
       path.resolve(__dirname, "src/scss/infopage.scss"),
       path.resolve(__dirname, "src/scss/style.scss"),
     ],
-    index: path.resolve(__dirname, "src/js/main.js"),
+    index: [
+      path.resolve(__dirname, "src/js/main.js"),
+      path.resolve(__dirname, "src/scss/index.scss"),
+    ],
     sebastian: [path.resolve(__dirname, "src/scss/sebastian.scss")],
     kristina: [path.resolve(__dirname, "src/scss/kristina.scss")],
     "about-us": [path.resolve(__dirname, "src/scss/about-us.scss")],

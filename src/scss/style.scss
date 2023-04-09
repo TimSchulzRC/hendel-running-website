@@ -25,9 +25,66 @@ body {
     perspective: 100px;
     -webkit-perspective: 100px;
     overflow-x: hidden;
-    &:after {
-        display: none;
-        content: url("../assets/img/nw_221009_11_10_48-3.jpeg") url("../assets/img/IMG_5249.jpeg") url("../assets/img/K_Hendel_2022 6.jpeg") url("../assets/img/K_Hendel_2022\ 7_upscale.jpeg") url("../assets/img/ueber_uns_header.jpeg");
+    // &:after {
+    //     display: none;
+    //     content: url("../assets/img/nw_221009_11_10_48-3.webp") url("../assets/img/IMG_5249.webp") url("../assets/img/K_Hendel_2022 6.webp") url("../assets/img/K_Hendel_2022\ 7_upscale.webp") url("../assets/img/ueber_uns_header.webp");
+    // }
+}
+
+@mixin gradient-font {
+    background: linear-gradient(colors.$orange, colors.$orange, colors.$yellow);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+header {
+    height: sizes.$image-height;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-position: top;
+    background-size: cover;
+    background-blend-mode: darken;
+    margin-top: calc(sizes.$navbar-height * -1);
+    position: relative;
+    z-index: -1;
+
+    .container {
+        text-align: center;
+        padding-top: sizes.$navbar-height;
+        padding-bottom: sizes.$large-spacing;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: end;
+        letter-spacing: 5px;
+
+        h2 {
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        h1 {
+            font-size: 5rem;
+            font-weight: 500;
+
+            @include bootstrap.media-breakpoint-down(lg) {
+                font-size: 3rem;
+            }
+
+            @include bootstrap.media-breakpoint-down(md) {
+                font-size: 2rem;
+            }
+
+            .fName {
+                @include gradient-font;
+            }
+
+            .lName {
+                color: colors.$yellow;
+            }
+        }
     }
 }
 
@@ -92,46 +149,20 @@ body {
 .text {
     padding-top: sizes.$text-padding;
     padding-bottom: sizes.$text-padding;
+    .btn {
+        background: colors.$orange;
+        border: none;
+        border-radius: sizes.$border-radius;
+        color: white;
+    }
 }
 
-.header-home {
-    position: relative;
-    z-index: -1;
-    display: flex;
-    align-items: center;
-    &.blob {
-        &:after {
-            object-fit: cover;
-            height: 150%;
-            top: auto;
-            left: 50%;
-            @include bootstrap.media-breakpoint-down(md) {
-                display: none;
-            }
-        }
-    }
-    .blob {
-        overflow-y: hidden;
-        &:after {
-            width: 80%;
-            left: 10%;
-        }
-        .image {
-            height: 100%;
-            img {
-                object-fit: cover;
-                object-position: top;
-                width: 100%; 
-                height: sizes.$image-height;  
-            }
-        }
-    }
-}
 
 
 section {
     display: flex;
     margin-bottom: sizes.$large-spacing;
+    margin-top: sizes.$large-spacing;
     .row {
         .image {
             display: flex;
@@ -163,7 +194,7 @@ section {
         width: 110%;
         height: 110%;
         z-index: -1;
-        background-image: url("../assets/img/jake-blucker-OJX7gIU3E6U-unsplash.jpg");
+        background-image: url("../assets/img/home_sponsoren_hintergrund.webp");
         background-size: cover;
         background-position: center;
         filter: grayscale(100%) blur(sizes.$blur);
@@ -184,14 +215,17 @@ section {
         --bs-gutter-x: 1rem;
         --bs-gutter-y: 1rem;
         .image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: sizes.$border-radius;
             height: 200px;
-            background: rgba($color: #fff, $alpha: 0.5);
+            padding: sizes.$text-padding;
+            background: rgba($color: #fff, $alpha: 0.7);
             backdrop-filter: blur(sizes.$blur);
             img{
                 object-fit: contain;
                 object-position: center;
-                
             }
         }
     }
