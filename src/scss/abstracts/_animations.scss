@@ -1,25 +1,22 @@
 @use "colors";
 @use "bootstrap";
 
-@keyframes wiggle {
-    0% {
-        border-radius: 61% 39% 54% 46% / 59% 51% 49% 41%;
+@keyframes transform {
+    0%,
+    100% {
+        transform: rotate(0deg) perspective(700px) scale(1) skew(3deg, 4deg);
     }
 
     25% {
-        border-radius: 36% 64% 53% 47% / 44% 51% 49% 56%;
+        transform: rotate(15deg) perspective(700px) skew(8deg, 6deg) scale(0.99);
     }
 
     50% {
-        border-radius: 52% 48% 65% 35% / 46% 46% 54% 54%;
+        transform: rotate(18deg) perspective(700px) scale(1) skew(4deg, 6deg);
     }
 
     25% {
-        border-radius: 47% 53% 48% 52% / 52% 39% 61% 48%;
-    }
-
-    100% {
-        border-radius: 61% 39% 54% 46% / 59% 51% 49% 41%;
+        transform: rotate(12deg) perspective(700px) scale(0.99) skew(5deg, 4deg);
     }
 }
     

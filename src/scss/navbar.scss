@@ -7,9 +7,21 @@ nav {
     min-height: sizes.$navbar-height;
     font-size: larger;
 
+
     @include bootstrap.media-breakpoint-down(md) {
         font-size: x-large;
+        .navbar-nav {
+            padding-bottom: sizes.$navbar-height + 26px;
+    
+            li {
+                text-align: center;
+            }
+        }
+        .container {
+            padding: 0 1rem;
+        }
     }
+
 
     ul {
         @include bootstrap.media-breakpoint-up(md) {
@@ -19,12 +31,12 @@ nav {
 
     .navbar-brand {
         margin-right: sizes.$nav-item-spacing;
+        img {
+            height: sizes.$navbar-height;
+            width: auto;
+        }
     }
-
-    .navbar-toggler {
-        position: relative;
-    }
-
+    
     .navbar-toggler,
     .navbar-toggler:focus,
     .navbar-toggler:active {
@@ -32,8 +44,12 @@ nav {
         box-shadow: none;
         border: 0;
     }
-
+    
     .navbar-toggler {
+        position: relative;
+        height: sizes.$navbar-height;
+        width: calc(sizes.$navbar-height / 2);
+
         span {
             margin: 0;
             padding: 0;

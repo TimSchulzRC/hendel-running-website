@@ -9,15 +9,6 @@
     color: transparent;
 }
 
-@include bootstrap.media-breakpoint-down(md) {
-    .navbar-nav {
-        padding-bottom: sizes.$navbar-height;
-        li {
-            text-align: center;
-        }
-    }
-}
-
 .subpage {
     #leistungen {
         background-size: cover;
@@ -29,7 +20,7 @@
         }
         padding: calc(sizes.$large-spacing * 2) 0;
         h2 {
-            @include gradient-font;
+            color: colors.$orange
         }
         ul {
             list-style: none;
