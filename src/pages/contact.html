@@ -8,9 +8,12 @@
     <title>Kontakt</title>
 </head>
 
-<main></main>
-
 <body>
+
+    <a class="scrollToTop btn btn-lg btn-dark" href="#">
+        <img src="../assets/svg/up-arrow-svgrepo-com.svg" width="20" height="20" alt="">
+    </a>
+
     <nav class="navbar navbar-expand-md navbar-dark bg-transparent">
         <div class="container">
             <a class="navbar-brand" href="/" aria-label="Logo with link to the home page">
@@ -35,10 +38,84 @@
                     <li class="nav-item">
                         <a class="nav-link" href="sebastian.html">Sebastian</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Kontakt</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <main id="contact" class="container">
+        <section class="row">
+
+            <div class="col-12 col-lg-6">
+                <h2>
+                    Kontaktinformationen
+                </h2>
+                <div>
+                    <h3>
+                        Für Wettkampfanfragen
+                    </h3>
+                    <p>
+                        Wenden Sie sich einfach an unseren Athleten Manager: <br>
+                        Dieter Albertus <br>
+                        <a href="mailto:dieter.albertus@freenet.de">dieter.albertus@freenet.de</a>
+                    </p>
+                </div>
+                <div>
+                    <h3>
+                        Für Autogrammkarten
+                    </h3>
+                    <p>
+                        Senden sie einen frankierten Umschlag für die Rückantwort an: <br>
+                        Sebastian Hendel <br>
+                        Krummer Weg 6c <br>
+                        08468 Reichenbach im Vogtland <br>
+                    </p>
+                </div>
+                <div>
+                    <h3>
+                        Für alle anderen Anliegen
+                    </h3>
+                    <p>
+                        Kontaktieren sie uns über <a
+                            href="mailto:info@hendel-running.de">info@hendel-running.de</a>
+                        oder nutzen Sie das
+                        folgende
+                        Kontaktformular.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <form action="https://formspree.io/f/xjvdlndy" method="POST"
+                    class="row g-2 mt-lg-0">
+                    <div class="col-12"><input required type="email" name="email"
+                            class="form-control text-bg-white border-dark"
+                            placeholder="E-Mail-Adresse"></div>
+                    <div class="col-12">
+                        <textarea required name="message" id="" cols="30" rows="10"
+                            class="form-control text-bg-white border-dark"
+                            placeholder="Nachricht"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit"
+                            class="btn btn-lg btn-success w-100 mt-3">Absenden</button>
+                    </div>
+                </form>
+            </div>
+            <!-- 
+            <script>
+                const form = document.getElementsByTagName("form")[0]
+                function handleForm(event) {
+                    event.preventDefault();
+                    fetch()
+                }
+                form.addEventListener('submit', handleForm);
+            </script> -->
+
+        </section>
+    </main>
 
     <footer>
         <div class="container">

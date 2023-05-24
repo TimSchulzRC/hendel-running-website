@@ -6,6 +6,7 @@ nav {
     background-color: colors.$base-color;
     min-height: sizes.$navbar-height;
     font-size: larger;
+    z-index: 10;
 
 
     @include bootstrap.media-breakpoint-down(md) {

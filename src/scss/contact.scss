@@ -1,0 +1,14 @@
+@use "abstracts/colors";
+@use "abstracts/sizes";
+
+#contact {
+
+    padding-top: sizes.$large-spacing;
+    a {
+        color: colors.$orange;
+    }
+
+    form {
+        margin-top: sizes.$text-padding;
+    }
+}

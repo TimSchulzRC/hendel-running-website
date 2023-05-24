@@ -22,8 +22,6 @@ html, body{
 
 body {
     height: 100vh;
-    perspective: 100px;
-    -webkit-perspective: 100px;
     overflow-x: hidden;
     // &:after {
     //     display: none;
@@ -38,6 +36,25 @@ body {
     color: transparent;
 }
 
+.scrollToTop {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    width:50px;
+    height:50px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: sizes.$border-radius;
+
+}
+
 header {
     height: sizes.$image-height;
     background-color: rgba(0, 0, 0, 0.5);
@@ -46,7 +63,6 @@ header {
     background-blend-mode: darken;
     margin-top: - calc(sizes.$navbar-height + 26px);
     position: relative;
-    z-index: -1;
 
     .container {
         text-align: center;
@@ -101,7 +117,6 @@ header {
     left: 0px;
     height: 100%;
     aspect-ratio: 10 / 8;
-    z-index: -1;
     border-radius: 46% 54% 51% 49% / 57% 41% 59% 43%;
     animation: transform 12s infinite;
 }
@@ -111,6 +126,9 @@ header {
     position: relative;
     display: flex;
     align-items: center;
+    > * {
+        z-index: 1;
+    }
     &:after {
         @include blob;
     }
@@ -224,16 +242,24 @@ section {
             justify-content: center;
             border-radius: sizes.$border-radius;
             height: 200px;
-            padding: calc(sizes.$text-padding / 2);
+            padding: calc(sizes.$text-padding);
             @include bootstrap.media-breakpoint-down(md) {
-                padding: calc(sizes.$text-padding / 3);
+                padding: calc(sizes.$text-padding  / 3);
             }
             background: rgba($color: #fff, $alpha: 0.7);
             backdrop-filter: blur(sizes.$blur);
             img{
+                max-height: 100px;
                 object-fit: contain;
                 object-position: center;
             }
+            &:hover {
+                background: rgba($color: #fff, $alpha: 0.9);
+                scale: 1.05;
+                transition: all 0.2s ease-in-out;
+                // cursor: pointer;
+            }
+            transition: all 0.2s ease-in-out;
         }
     }
 }

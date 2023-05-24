@@ -34,6 +34,7 @@ module.exports = {
     sebastian: [path.resolve(__dirname, "src/scss/sebastian.scss")],
     kristina: [path.resolve(__dirname, "src/scss/kristina.scss")],
     "about-us": [path.resolve(__dirname, "src/scss/about-us.scss")],
+    contact: [path.resolve(__dirname, "src/scss/contact.scss")],
   },
   output: {
     path: path.resolve(__dirname, "dist"),
