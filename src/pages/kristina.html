@@ -10,10 +10,15 @@
 
 <body>
 
-    <a class="scrollToTop btn btn-lg btn-dark" href="#">
+    <button class="scrollToTop btn btn-lg btn-dark user-select-none" onclick="scrollToTop()">
         <img src="../assets/svg/up-arrow-svgrepo-com.svg" width="20" height="20" alt="">
-    </a>
-
+    </button>
+    <script>
+        function scrollToTop() {
+            document.body.scrollTo({ top: 0, behavior: "smooth" });
+            document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
     <nav class="navbar navbar-expand-md navbar-dark bg-transparent">
         <div class="container">
             <a class="navbar-brand" href="/" aria-label="Logo with link to the home page">
@@ -49,7 +54,7 @@
     <main id="kristina" class="subpage">
         <header>
             <div class="container">
-                <h2>Vom Ungeplanten Glück</h2>
+                <h2>Superschnelle Ausdauerheldin</h2>
                 <h1><span class="fName">Kristina</span> <span class="lName">Hendel</span></h1>
             </div>
         </header>
@@ -61,29 +66,26 @@
                         <h2>Anfänge</h2>
                         <p>
                             Kristina Božić – so ihr Mädchenname – ist in der kroatischen Hauptstadt
-                            Zagreb aufgewachsen. Der
-                            Sport spielte von Kindesbeinen an eine wichtige Rolle in ihrem Leben.
-                            Allerdings fand sie erst über
-                            Umwege zur Leichtathletik. Mit neun Jahren begann Kristina zunächst
-                            Tennis
-                            zu spielen und bewies
-                            auch dabei einiges Talent. Doch schnell zeigte sich, dass sie besondere
-                            läuferische Stärken hat, und
-                            so wechselte sie 2008, im Alter von zwölf Jahren, zu den Leichtathleten.
-                            Schnell zeigte sich, dass
-                            ihr die längeren Strecken besonders liegen. Nur kurze Zeit später zählte
-                            sie
+                            Zagreb aufgewachsen. Der Sport spielte von
+                            Kindesbeinen an eine wichtige Rolle in ihrem Leben. Allerdings fand sie
+                            erst über Umwege zur
+                            Leichtathletik. Mit neun Jahren begann Kristina zunächst Tennis zu
+                            spielen und bewies auch dabei
+                            einiges Talent. Doch schnell zeigte sich, dass sie besondere läuferische
+                            Stärken hat, und so
+                            wechselte sie 2008, im Alter von zwölf Jahren, zu den Leichtathleten.
+                            Schnell zeigte sich, dass ihr
+                            die längeren Strecken besonders liegen. Nur kurze Zeit später zählte sie
                             zu den besten
                             Langstreckenläuferinnen Kroatiens. Die ersten Erfolge ließen nicht lange
-                            auf
-                            sich warten. 2012, im
+                            auf sich warten. 2012, im
                             Alter von 16 Jahren, startete sie in Barcelona zum ersten Mal bei einer
                             U-20-Weltmeisterschaft über
                             3000 Meter Hindernis. 2013, mit gerade einmal 17 Jahren, gewann Kristina
-                            im
-                            3000-Meter-Hindernislauf
+                            im 3000-Meter-Hindernislauf
                             ihren ersten nationalen Titel. Schon im Jahr zuvor war sie auf dieser
-                            Strecke kroatische Vizemeisterin gewesen.
+                            Strecke kroatische
+                            Vizemeisterin gewesen.
                         </p>
                     </div>
                     <div
@@ -104,21 +106,18 @@
                             merkte aber schnell, dass das nicht das Richtige für sie ist. Das neue
                             Umfeld und neue
                             Trainingsmethoden sollten dennoch schnell zu gewachsenem
-                            Leistungsvermögen
-                            führen. So verbesserte
+                            Leistungsvermögen führen. So verbesserte
                             sie während des Studiums den kroatischen Jugendrekord über 3000 Meter in
-                            der
-                            Halle. Auch nach ihrer
+                            der Halle. Auch nach ihrer
                             Hochzeit, dem Umzug nach Deutschland sowie der Geburt ihres Sohnes
-                            Jonathan
-                            im Oktober 2016 startete
+                            Jonathan im Oktober 2016 startete
                             Kristina Hendel weiterhin für Kroatien. Im 3000-Meter-Hindernislauf hält
-                            sie
-                            bis heute mit 10:02:20
+                            sie bis heute mit 10:02:20
                             Minuten den Landesrekord, den sie 2018 als gerade einmal 22-Jährige im
                             belgischen Oordegem
                             aufgestellt hatte. Auch über 3000 Meter, 5000 Meter und 10.000 Meter
-                            gehört sie seit Jahren zu den Besten ihres Landes.
+                            gehört sie seit Jahren zu den
+                            Besten ihres Landes.
                         </p>
                     </div>
                 </div>
@@ -130,13 +129,13 @@
         </section>
 
         <section class="container">
-            <div class="row">
+            <div class="row align-items-start">
                 <div
-                    class="col-sm-12 col-lg-6 order-1 order-lg-0 blob blob-left image justify-content-center justify-content-lg-start">
+                    class="col-sm-12 col-lg-6 blob blob-left image justify-content-center justify-content-lg-start d-none d-lg-flex">
                     <img class="img-fluid animate" src="../assets/img/no-bg/134_ret-sw.webp"
                         alt="Sebastian Hendel im Laufschritt, Ganzkörperaufnahme">
                 </div>
-                <div class="col-sm-12 col-lg-6 order-0 order-lg-1">
+                <div class="col-sm-12 col-lg-6">
                     <div class="text animate right">
                         <h2>Mutterschaft und Spitzensport</h2>
                         <p>
@@ -150,7 +149,7 @@
                             ein halbes Jahr nach der
                             Geburt, im April 2017 verbesserte sie beim City-Lauf in Korschenbroich
                             ihren persönlichen Rekord
-                            über 5000 Meter um über eine Minute. Im selben Monat wurde sie in
+                            über 5000 Meter um über eine Minute. Im selben  Monat wurde sie in
                             persönlicher Bestzeit kroatische
                             Meisterin über 10.000 Meter. Bei den folgenden
                             U-23-Europameisterschaften in Polen lief sie über
@@ -162,6 +161,30 @@
                             Stunden. Eine Zeit, die sie
                             beim Hamburg-Marathon 2022 als Fünfte noch um eine Sekunde verbessern
                             konnte.
+                        </p>
+                    </div>
+                    <div
+                        class="col-sm-12 col-lg-6 blob blob-left image justify-content-center justify-content-lg-start d-lg-none">
+                        <img class="img-fluid animate" src="../assets/img/no-bg/134_ret-sw.webp"
+                            alt="Sebastian Hendel im Laufschritt, Ganzkörperaufnahme">
+                    </div>
+                    <div class="text animate right">
+                        <h2>Gold-Debüt im deutschen Trikot</h2>
+                        <p>
+                            Am 15. August gab Kristina bei der EM in München ihr Debüt im Trikot der
+                            deutschen
+                            Nationalmannschaft. Und was für eines! Sie holte mit dem deutschen Team
+                            die Goldmedaille im
+                            Marathon-Mannschaftswettbewerb! Und das, obwohl Kristina ab Kilometer 15
+                            Schmerzen wegen eines
+                            eingeklemmten Nervs in der Hüfte plagten, der ihr schon in der
+                            Vorbereitung zu schaffen machte.
+                            Dennoch lief sie auf einem unter diesen Umständen respektablen 20. Platz
+                            in der Einzelwertung ins
+                            Ziel. Mit ihren Leistungen hat sie auch die Herzen der Vogtländer im
+                            Sturm erobert. Die wählten sie
+                            bei der Umfrage nach den Sportlerinnen des Jahres 2022 auf den dritten
+                            Platz.
                         </p>
                     </div>
                 </div>
@@ -231,7 +254,7 @@
                     </div>
                     <div class="col-6 col-md-4 col-xl">
                         <a href="https://www.swrc.de/" target="_blank" class="image">
-                            <img src="../assets/img/sponsors/stadtwerke.webp"
+                            <img src="../assets/svg/sponsors/stadtwerke.svg"
                                 alt="Logo der Stadtwerke Reichenbach" class="img-fluid">
                         </a>
                     </div>
@@ -242,14 +265,14 @@
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-xl">
-                        <a href="https://sponser.de/" target="_blank" class="image">
-                            <img src="../assets/svg/sponsors/sponser.svg" alt="Logo von Sponser"
+                        <a href="https://www.mietens.com/" target="_blank" class="image">
+                            <img src="../assets/svg/sponsors/mietens.svg" alt="Logo von Mietens"
                                 class="img-fluid">
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-xl">
-                        <a href="https://www.mietens.com/" target="_blank" class="image">
-                            <img src="../assets/svg/sponsors/mietens.svg" alt="Logo von Mietens"
+                        <a href="https://sponser.de/" target="_blank" class="image">
+                            <img src="../assets/svg/sponsors/sponser.svg" alt="Logo von Sponser"
                                 class="img-fluid">
                         </a>
                     </div>

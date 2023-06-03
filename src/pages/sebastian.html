@@ -10,10 +10,15 @@
 
 <body>
 
-    <a class="scrollToTop btn btn-lg btn-dark" href="#">
+    <button class="scrollToTop btn btn-lg btn-dark user-select-none" onclick="scrollToTop()">
         <img src="../assets/svg/up-arrow-svgrepo-com.svg" width="20" height="20" alt="">
-    </a>
-
+    </button>
+    <script>
+        function scrollToTop() {
+            document.body.scrollTo({ top: 0, behavior: "smooth" });
+            document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
     <nav class="navbar navbar-expand-md navbar-dark bg-transparent">
         <div class="container">
             <a class="navbar-brand" href="/" aria-label="Logo with link to the home page">
@@ -49,7 +54,7 @@
     <main id="sebastian" class="subpage">
         <header class="subpage-header">
             <div class="container">
-                <h2>Vom Ungeplanten Glück</h2>
+                <h2>Marathonmaschine</h2>
                 <h1><span class="fName">Sebastian</span> <span class="lName">Hendel</span></h1>
             </div>
         </header>
@@ -59,7 +64,7 @@
             <div class="row align-items-start">
                 <div class="col-sm-12 col-lg-6">
                     <div class="text animate left">
-                        <h2>Werdegang...</h2>
+                        <h2>Anfänge</h2>
                         <p>
                             Sebastian Hendel wuchs in einem sehr sportlichen Umfeld auf. Kein Wunder
                             also, dass er schon als
@@ -99,7 +104,7 @@
                             im Juli 2012, als er in
                             Mönchengladbach Deutscher U-18-Meister über 3000 Meter wurde. In den
                             Folgejahren sollten noch einige
-                            weitere nationale Titel und Medaillenplätze in der Hallen und im Freien
+                            weitere nationale Titel und Medaillenplätze in der Halle und im Freien
                             auf den Strecken zwischen
                             1500 und 10.000 Meter folgen. Nach erfolgreichem Abitur 2014 entschied
                             sich Sebastian Hendel, das
@@ -112,8 +117,8 @@
                             Mit persönlicher Bestzeit über 5000 Meter meldete sich Sebastian Hendel
                             eindrucksvoll zurück. Doch
                             die Schwangerschaft seiner Freundin Kristina, Hochzeit und Vaterschaft
-                            zwangen ihn dazu sein Studium
-                            in den USA abzubrechen.
+                            zwangen ihn dazu, sein
+                            Studium in den USA abzubrechen.
                         </p>
                     </div>
                 </div>
@@ -125,13 +130,13 @@
         </section>
 
         <section class="container">
-            <div class="row">
+            <div class="row align-items-start">
                 <div
-                    class="col-sm-12 col-lg-6 order-1 order-lg-0 blob blob-left image justify-content-center justify-content-lg-start">
+                    class="col-sm-12 col-lg-6 blob blob-left image justify-content-center justify-content-lg-start d-none d-lg-flex">
                     <img class="img-fluid animate" src="../assets/img/no-bg/128_ret-sw.webp"
                         alt="Sebastian Hendel im Laufschritt, Ganzkörperaufnahme">
                 </div>
-                <div class="col-sm-12 col-lg-6 order-0 order-lg-1">
+                <div class="col-sm-12 col-lg-6">
                     <div class="text animate right">
                         <h2>Doppelter Paukenschlag</h2>
                         <p>
@@ -156,7 +161,29 @@
                             Deutschen Meisterschaften im Halbmarathon. Zwei Wochen später ließ er
                             Platz 4 bei den Titelkämpfen
                             im 10.000-Meter-Straßenlauf folgen.
-
+                        </p>
+                    </div>
+                    <div
+                        class="col-sm-12 col-lg-6 blob blob-left image justify-content-center justify-content-lg-start d-lg-none">
+                        <img class="img-fluid animate" src="../assets/img/no-bg/128_ret-sw.webp"
+                            alt="Sebastian Hendel im Laufschritt, Ganzkörperaufnahme">
+                    </div>
+                    <div class="text animate right">
+                        <h2>Auf Anhieb in der nationalen Spitze</h2>
+                        <p>
+                            Im Oktober 2022 wagte sich Sebastian an seinem ersten
+                            Marathon-Wettkampf. Und wie schon für seine
+                            Frau Kristina bei der EM zwei Monate zuvor erwies sich für ihn das
+                            Pflaster der bayerischen
+                            Landeshauptstadt als Glücksgriff. Er beendete den München-Marathon als
+                            Vierter und damit als bester
+                            Europäer. Mit der Zeit von 2:10:37 Stunden lief er auf Anhieb auf Platz
+                            3 der deutschen Bestenliste
+                            des Jahres. Die Normzeit für Olympia 2024 in Paris von 2:09:40 ist also
+                            schon in Sichtweite. Auch
+                            bei seinem zweiten Marathon im April 2023 in Wien wusste Sebastian als
+                            Neunter und damit zweitbester
+                            Europäer zu überzeugen.
                         </p>
                     </div>
                 </div>
@@ -186,8 +213,8 @@
                             </li>
                             <li>
                                 <span>Halbmarathon</span>
-                                <span>62:25 min</span>
-                                <span>Hamburg (2021)</span>
+                                <span>61:52 min</span>
+                                <span>Berlin (2023)</span>
                             </li>
                             <li>
                                 <span>Marathon</span>
@@ -210,6 +237,9 @@
                         </ul>
                     </div>
                 </div>
+                <div class="bg-caption text-secondary position-absolute bottom-0 pb-3">
+                    Foto von David Williams
+                </div>
             </div>
         </section>
 
@@ -223,8 +253,26 @@
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-xl-3">
+                        <a href="https://www.swrc.de/" target="_blank" class="image">
+                            <img src="../assets/svg/sponsors/stadtwerke.svg"
+                                alt="Logo der Stadtwerke Reichenbach" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <a href="https://datec-gmbh.de/" target="_blank" class="image">
+                            <img src="../assets/svg/sponsors/datec.svg" alt="Logo von Datec"
+                                class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-3">
                         <a href="https://www.thermofin.de/" target="_blank" class="image">
                             <img src="../assets/svg/sponsors/thermofin.svg" alt="Logo von Thermofin"
+                                class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <a href="https://www.mietens.com/" target="_blank" class="image">
+                            <img src="../assets/svg/sponsors/mietens.svg" alt="Logo von Mietens"
                                 class="img-fluid">
                         </a>
                     </div>
@@ -236,32 +284,14 @@
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-xl-3">
-                        <a href="https://www.woba-reichenbach.de/" target="_blank" class="image">
-                            <img src="../assets/svg/sponsors/woba.svg" alt="Logo von WOBA"
-                                class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-4 col-xl-3">
-                        <a href="https://www.swrc.de/" target="_blank" class="image">
-                            <img src="../assets/img/sponsors/stadtwerke.webp"
-                                alt="Logo der Stadtwerke Reichenbach" class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-4 col-xl-3">
-                        <a href="https://datec-gmbh.de/" target="_blank" class="image">
-                            <img src="../assets/svg/sponsors/datec.svg" alt="Logo von Datec"
-                                class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-4 col-xl-3">
                         <a href="https://sponser.de/" target="_blank" class="image">
                             <img src="../assets/svg/sponsors/sponser.svg" alt="Logo von Sponser"
                                 class="img-fluid">
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-xl-3">
-                        <a href="https://www.mietens.com/" target="_blank" class="image">
-                            <img src="../assets/svg/sponsors/mietens.svg" alt="Logo von Mietens"
+                        <a href="https://www.woba-reichenbach.de/" target="_blank" class="image">
+                            <img src="../assets/svg/sponsors/woba.svg" alt="Logo von WOBA"
                                 class="img-fluid">
                         </a>
                     </div>

@@ -10,10 +10,15 @@
 
 <body>
 
-    <a class="scrollToTop btn btn-lg btn-dark" href="#">
+    <button class="scrollToTop btn btn-lg btn-dark user-select-none" onclick="scrollToTop()">
         <img src="../assets/svg/up-arrow-svgrepo-com.svg" width="20" height="20" alt="">
-    </a>
-
+    </button>
+    <script>
+        function scrollToTop() {
+            document.body.scrollTo({ top: 0, behavior: "smooth" });
+            document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
     <nav class="navbar navbar-expand-md navbar-dark bg-transparent">
         <div class="container">
             <a class="navbar-brand" href="/" aria-label="Logo with link to the home page">
@@ -51,12 +56,12 @@
         <section class="">
             <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
             <p>Sebastian Hendel<br />
-                Krummer Weg 6c<br />
+                Postfach 1234<br />
                 08468 Reichenbach</p>
         </section>
         <section>
             <h2>Kontakt</h2>
-            <p>E-Mail: info@hendel-running.de</p>
+            <p>E-Mail: kontakt@hendel-running.de</p>
         </section>
         <section>
             <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>

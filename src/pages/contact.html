@@ -10,11 +10,16 @@
 
 <body>
 
-    <a class="scrollToTop btn btn-lg btn-dark" href="#">
+    <button class="scrollToTop btn btn-lg btn-dark user-select-none" onclick="scrollToTop()">
         <img src="../assets/svg/up-arrow-svgrepo-com.svg" width="20" height="20" alt="">
-    </a>
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-transparent">
+    </button>
+    <script>
+        function scrollToTop() {
+            document.body.scrollTo({ top: 0, behavior: "smooth" });
+            document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
+    <nav id="nav" class="navbar navbar-expand-md navbar-dark bg-transparent">
         <div class="container">
             <a class="navbar-brand" href="/" aria-label="Logo with link to the home page">
                 <img src="../assets/svg/logo.svg" width="40" height="40" alt="">
@@ -80,7 +85,7 @@
                     </h3>
                     <p>
                         Kontaktieren sie uns über <a
-                            href="mailto:info@hendel-running.de">info@hendel-running.de</a>
+                            href="mailto:kontakt@hendel-running.de">kontakt@hendel-running.de</a>
                         oder nutzen Sie das
                         folgende
                         Kontaktformular.
@@ -104,16 +109,6 @@
                     </div>
                 </form>
             </div>
-            <!-- 
-            <script>
-                const form = document.getElementsByTagName("form")[0]
-                function handleForm(event) {
-                    event.preventDefault();
-                    fetch()
-                }
-                form.addEventListener('submit', handleForm);
-            </script> -->
-
         </section>
     </main>
 

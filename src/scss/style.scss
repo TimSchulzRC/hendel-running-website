@@ -23,10 +23,6 @@ html, body{
 body {
     height: 100vh;
     overflow-x: hidden;
-    // &:after {
-    //     display: none;
-    //     content: url("../assets/img/nw_221009_11_10_48-3.webp") url("../assets/img/IMG_5249.webp") url("../assets/img/K_Hendel_2022 6.webp") url("../assets/img/K_Hendel_2022\ 7_upscale.webp") url("../assets/img/ueber_uns_header.webp");
-    // }
 }
 
 @mixin gradient-font {
@@ -186,7 +182,13 @@ section {
     margin-bottom: sizes.$large-spacing;
     margin-top: sizes.$large-spacing;
     .row {
+        position: relative;
         .image {
+            @media (max-width: 991px) {
+                position: sticky;
+            }
+            top: sizes.$navbar-height;
+            padding-top: sizes.$text-padding;
             display: flex;
             img {
                 object-fit: cover;
