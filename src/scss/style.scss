@@ -14,15 +14,12 @@ html, body{
     background-color: colors.$base-color;
     color:#fff;
     font-family: "Roboto", sans-serif;
-    @include bootstrap.media-breakpoint-down(md) {
-        overflow-x: hidden;
-    }
+    overflow-x: hidden;
 }
 
 
 body {
     height: 100vh;
-    overflow-x: hidden;
 }
 
 @mixin gradient-font {
@@ -184,10 +181,10 @@ section {
     .row {
         position: relative;
         .image {
-            @media (max-width: 991px) {
+            @media (min-width: 991px) {
                 position: sticky;
+                top: sizes.$navbar-height;
             }
-            top: sizes.$navbar-height;
             padding-top: sizes.$text-padding;
             display: flex;
             img {
