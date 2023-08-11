@@ -1,52 +1,22 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
+const HtmlBundlerPlugin = require("html-bundler-webpack-plugin");
 const RobotstxtPlugin = require("robotstxt-webpack-plugin");
 
-let htmlPageNames = [
-  "sebastian",
-  "kristina",
-  "about-us",
-  "contact",
-  "privacy-policy",
-  "legal-details",
-];
-let multipleHtmlPlugins = htmlPageNames.map((name) => {
-  console.log(name);
-  return new HtmlWebpackPlugin({
-    template: `./src/pages/${name}.html`, // relative path to the HTML files
-    filename: `${name}.html`, // output HTML files
-    chunks: ["commons", `${name}`], // respective JS and SCSS files
-  });
-});
-
 module.exports = {
-  entry: {
-    commons: [
-      "bootstrap",
-      path.resolve(__dirname, "src/scss/subpage.scss"),
-      path.resolve(__dirname, "src/scss/infopage.scss"),
-      path.resolve(__dirname, "src/scss/style.scss"),
-    ],
-    index: [
-      path.resolve(__dirname, "src/js/main.js"),
-      path.resolve(__dirname, "src/scss/index.scss"),
-    ],
-    sebastian: [path.resolve(__dirname, "src/scss/sebastian.scss")],
-    kristina: [path.resolve(__dirname, "src/scss/kristina.scss")],
-    "about-us": [path.resolve(__dirname, "src/scss/about-us.scss")],
-    contact: [path.resolve(__dirname, "src/scss/contact.scss")],
-  },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].[contenthash].js",
     clean: true,
-    assetModuleFilename: "[name][ext]",
   },
   devtool: "source-map",
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),
+    },
+    watchFiles: {
+      paths: ["src/**/*.*"],
+      options: {
+        usePolling: true,
+      },
     },
     port: 3000,
     open: {
@@ -63,10 +33,6 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          {
-            loader: MiniCSSExtractPlugin.loader,
-            options: {},
-          },
           "css-loader",
           "postcss-loader",
           "sass-loader",
@@ -85,22 +51,43 @@ module.exports = {
         ],
       },
       {
-        test: /\.html$/i,
-        use: {
-          loader: "html-loader",
+        test: /\.(png|jpe?g|webp|ico|svg)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/img/[name].[hash:8][ext]",
+        },
+      },
+      {
+        test: /\.(ttf|woff2?)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/fonts/[name].[hash:8][ext]",
         },
       },
     ],
   },
   plugins: [
     new RobotstxtPlugin({}),
-    new MiniCSSExtractPlugin({
-      filename: "[name].[contenthash].min.css",
+    new HtmlBundlerPlugin({
+      // define a relative or absolute path to template pages,
+      // generated output HTML files keeps the original file structure relative to the entry path
+      entry: "src/pages/",
+
+      // OR define entry templates manually
+      // entry: {
+      //   index: "src/pages/index.html", // => dist/index.html
+      //   "about-us": "src/pages/about-us.html", // => dist/about-us.html
+      //   // etc.
+      // },
+
+      js: {
+        // output filename of JS extracted from source script specified in `<script>`
+        filename: "assets/js/[name].[contenthash:8].js",
+      },
+      css: {
+        // output filename of CSS extracted from source file specified in `<link>`
+        filename: "assets/css/[name].[contenthash:8].css",
+      },
     }),
-    new HtmlWebpackPlugin({
-      title: "Hendel Running",
-      template: path.resolve(__dirname, "src/pages/index.html"),
-      filename: "index.html",
-    }),
-  ].concat(multipleHtmlPlugins),
+  ],
 };
