@@ -1,459 +1,365 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="../assets/svg/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Erfahren Sie mehr über Kristina Hendel, eine leidenschaftliche Läuferin mit dem Ziel, bei den Olympischen Spielen 2024 in Paris anzutreten. Entdecken Sie ihre Reise und Erfolge in dieser inspirierenden Geschichte."
-    />
-    <meta
-      name="keywords"
-      content="Kristina, Hendel, Laufen, Olympische Spiele, Paris, Reise, Erfolge, inspirierende Geschichte, running, Hendel Running"
-    />
-    <meta name="robots" content="index, follow" />
-    <title>Kristina Hendel</title>
 
-    <link href="../scss/commons.scss" rel="stylesheet">
-    <link href="../scss/kristina.scss" rel="stylesheet">
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="../assets/svg/logo.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Erfahren Sie mehr über Kristina Hendel, eine leidenschaftliche Läuferin mit dem Ziel, bei den Olympischen Spielen 2024 in Paris anzutreten. Entdecken Sie ihre Reise und Erfolge in dieser inspirierenden Geschichte." />
+  <meta name="keywords"
+    content="Kristina, Hendel, Laufen, Olympische Spiele, Paris, Reise, Erfolge, inspirierende Geschichte, running, Hendel Running" />
+  <meta name="robots" content="index, follow" />
+  <title>Kristina Hendel</title>
 
-  <body>
-    <button
-      class="scrollToTop btn btn-lg btn-dark user-select-none"
-      onclick="scrollToTop()"
-      aria-label="Zurück zum Anfang"
-    >
-      <img
-        src="../assets/svg/up-arrow-svgrepo-com.svg"
-        width="20"
-        height="20"
-        alt=""
-      />
-    </button>
-    <script>
-      function scrollToTop() {
-        document.body.scrollTo({ top: 0, behavior: "smooth" });
-        document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    </script>
-    <nav class="navbar navbar-expand-md navbar-dark bg-transparent">
+  <link href="../scss/commons.scss" rel="stylesheet">
+  <link href="../scss/kristina.scss" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QW22P27H8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-0QW22P27H8');
+  </script>
+</head>
+
+<body>
+  <button class="scrollToTop btn btn-lg btn-dark user-select-none" onclick="scrollToTop()"
+    aria-label="Zurück zum Anfang">
+    <img src="../assets/svg/up-arrow-svgrepo-com.svg" width="20" height="20" alt="" />
+  </button>
+  <script>
+    function scrollToTop() {
+      document.body.scrollTo({ top: 0, behavior: "smooth" });
+      document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+  <nav class="navbar navbar-expand-md navbar-dark bg-transparent">
+    <div class="container">
+      <a class="navbar-brand" href="/" aria-label="Logo with link to the home page">
+        <img src="../assets/svg/logo.svg" width="40" height="40" alt="" />
+      </a>
+      <button
+        class="navbar-toggler collapsed border-0 d-flex d-md-none flex-column justify-content-around"
+        type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-icon top-bar text-muted"></span>
+        <span class="toggler-icon middle-bar text-muted"></span>
+        <span class="toggler-icon bottom-bar text-muted"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="about-us.html">Über uns</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kristina.html">Kristina</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sebastian.html">Sebastian</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="kristina" class="subpage">
+    <header>
       <div class="container">
-        <a
-          class="navbar-brand"
-          href="/"
-          aria-label="Logo with link to the home page"
-        >
-          <img src="../assets/svg/logo.svg" width="40" height="40" alt="" />
-        </a>
-        <button
-          class="navbar-toggler collapsed border-0 d-flex d-md-none flex-column justify-content-around"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="toggler-icon top-bar text-muted"></span>
-          <span class="toggler-icon middle-bar text-muted"></span>
-          <span class="toggler-icon bottom-bar text-muted"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <h2>Superschnelle Ausdauerheldin</h2>
+        <h1>
+          <span class="fName">Kristina</span>
+          <span class="lName">Hendel</span>
+        </h1>
+      </div>
+    </header>
+
+    <section class="container">
+      <div class="row align-items-start">
+        <div class="col-sm-12 col-lg-6">
+          <div class="text animate left">
+            <h2>Anfänge</h2>
+            <p>
+              Kristina Božić – so ihr Mädchenname – ist in der kroatischen
+              Hauptstadt Zagreb aufgewachsen. Der Sport spielte von
+              Kindesbeinen an eine wichtige Rolle in ihrem Leben. Allerdings
+              fand sie erst über Umwege zur Leichtathletik. Mit neun Jahren
+              begann Kristina zunächst Tennis zu spielen und bewies auch dabei
+              einiges Talent. Doch schnell zeigte sich, dass sie besondere
+              läuferische Stärken hat, und so wechselte sie 2008, im Alter von
+              zwölf Jahren, zu den Leichtathleten. Schnell zeigte sich, dass
+              ihr die längeren Strecken besonders liegen. Nur kurze Zeit
+              später zählte sie zu den besten Langstreckenläuferinnen
+              Kroatiens. Die ersten Erfolge ließen nicht lange auf sich
+              warten. 2012, im Alter von 16 Jahren, startete sie in Barcelona
+              zum ersten Mal bei einer U-20-Weltmeisterschaft über 3000 Meter
+              Hindernis. 2013, mit gerade einmal 17 Jahren, gewann Kristina im
+              3000-Meter-Hindernislauf ihren ersten nationalen Titel. Schon im
+              Jahr zuvor war sie auf dieser Strecke kroatische Vizemeisterin
+              gewesen.
+            </p>
+          </div>
+          <div
+            class="col-sm-12 col-lg-6 blob blob-right image d-lg-none d-flex justify-content-center">
+            <img id="sebastian-full" class="img-fluid animate"
+              src="../assets/img/no-bg/002_ret-sw.webp"
+              alt="Sebastian Hendel im Trainingsanzug, Ganzkörperaufnahme" />
+          </div>
+          <div class="text animate left">
+            <h2>Nationale Spitze</h2>
+            <p>
+              2014 startete Kristina Hendel zum dritten Mal bei den
+              kroatischen Meisterschaften im 3000-Meter-Hindernislauf und
+              verteidigte dabei den im Vorjahr errungenen Titel. Während ihres
+              ersten Studiensemesters 2015 am Iona College in New York
+              konzentrierte sie sich zunächst auf den Crosslauf, merkte aber
+              schnell, dass das nicht das Richtige für sie ist. Das neue
+              Umfeld und neue Trainingsmethoden sollten dennoch schnell zu
+              gewachsenem Leistungsvermögen führen. So verbesserte sie während
+              des Studiums den kroatischen Jugendrekord über 3000 Meter in der
+              Halle. Auch nach ihrer Hochzeit, dem Umzug nach Deutschland
+              sowie der Geburt ihres Sohnes Jonathan im Oktober 2016 startete
+              Kristina Hendel weiterhin für Kroatien. Im
+              3000-Meter-Hindernislauf hält sie bis heute mit 10:02:20 Minuten
+              den Landesrekord, den sie 2018 als gerade einmal 22-Jährige im
+              belgischen Oordegem aufgestellt hatte. Auch über 3000 Meter,
+              5000 Meter und 10.000 Meter gehört sie seit Jahren zu den Besten
+              ihres Landes.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 blob blob-right image d-none d-lg-flex">
+          <img class="img-fluid animate" src="../assets/img/no-bg/002_ret-sw.webp"
+            alt="Sebastian Hendel im Trainingsanzug, Ganzkörperaufnahme" />
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row align-items-start">
+        <div
+          class="col-sm-12 col-lg-6 blob blob-left image justify-content-center justify-content-lg-start d-none d-lg-flex">
+          <img class="img-fluid animate" src="../assets/img/no-bg/134_ret-sw.webp"
+            alt="Sebastian Hendel im Laufschritt, Ganzkörperaufnahme" />
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <div class="text animate right">
+            <h2>Mutterschaft und Spitzensport</h2>
+            <p>
+              Wenn sich Kristina etwas in den Kopf gesetzt hat, dann ist es
+              nicht so leicht, sie von ihrem Entschluss abzubringen. Ihren
+              Dickkopf bewies sie auch im Herbst 2016, als sie schon kurz nach
+              der Geburt ihres Sohnes den ärztlichen Rat in den Wind schlug
+              und sehr schnell wieder ins Training einstieg. In kurzer Zeit
+              erreichte sie wieder eine bestechende Form. Nur ein halbes Jahr
+              nach der Geburt, im April 2017 verbesserte sie beim City-Lauf in
+              Korschenbroich ihren persönlichen Rekord über 5000 Meter um über
+              eine Minute. Im selben  Monat wurde sie in persönlicher Bestzeit
+              kroatische Meisterin über 10.000 Meter. Bei den folgenden
+              U-23-Europameisterschaften in Polen lief sie über 5000 Meter auf
+              Platz 11 und über 10.000 Meter auf Platz 15. Inzwischen hat
+              Kristina Hendel, die seit 2021 auch einen deutschen Pass
+              besitzt, den Marathon für sich entdeckt. Gleich bei ihrer
+              Marathonpremiere 2021 in Essen siegte sie mit Streckenrekord von
+              2:27,30 Stunden. Eine Zeit, die sie beim Hamburg-Marathon 2022
+              als Fünfte noch um eine Sekunde verbessern konnte.
+            </p>
+          </div>
+          <div
+            class="col-sm-12 col-lg-6 blob blob-left image justify-content-center justify-content-lg-start d-lg-none">
+            <img class="img-fluid animate" src="../assets/img/no-bg/134_ret-sw.webp"
+              alt="Sebastian Hendel im Laufschritt, Ganzkörperaufnahme" />
+          </div>
+          <div class="text animate right">
+            <h2>Gold-Debüt im deutschen Trikot</h2>
+            <p>
+              Am 15. August gab Kristina bei der EM in München ihr Debüt im
+              Trikot der deutschen Nationalmannschaft. Und was für eines! Sie
+              holte mit dem deutschen Team die Goldmedaille im
+              Marathon-Mannschaftswettbewerb! Und das, obwohl Kristina ab
+              Kilometer 15 Schmerzen wegen eines eingeklemmten Nervs in der
+              Hüfte plagten, der ihr schon in der Vorbereitung zu schaffen
+              machte. Dennoch lief sie auf einem unter diesen Umständen
+              respektablen 20. Platz in der Einzelwertung ins Ziel. Mit ihren
+              Leistungen hat sie auch die Herzen der Vogtländer im Sturm
+              erobert. Die wählten sie bei der Umfrage nach den Sportlerinnen
+              des Jahres 2022 auf den dritten Platz.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="leistungen">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-xl-6">
+            <h2>Bestleistungen</h2>
+            <ul>
+              <li>
+                <span>3000m H</span>
+                <span>10:02,20 min</span>
+                <span>Oordegem, BEL (2018)</span>
+              </li>
+              <li>
+                <span>5km</span>
+                <span>15:52 min</span>
+                <span>Angers, FRA (2021)</span>
+              </li>
+              <li>
+                <span>10km</span>
+                <span>32:35 min</span>
+                <span>Berlin (2022)</span>
+              </li>
+              <li>
+                <span>Halbmarathon</span>
+                <span>70:36 min</span>
+                <span>Istanbul, TUR (2021)</span>
+              </li>
+              <li>
+                <span>Marathon</span>
+                <span>2:27:29 h</span>
+                <span>Hamburg (2022)</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-12 col-xl-6">
+            <h2>Erfolge</h2>
+            <ul>
+              <li>
+                <span>Teilnahme WM U20 3000m H - Barcelona, ESP (2012)</span>
+              </li>
+              <li>
+                <span>Finalistin WM U18 2000m H - Donezk, UKR (2013)</span>
+              </li>
+              <li>
+                <span>Teilnahme EM U20 3000m H - Rieti, ITA (2013)</span>
+              </li>
+              <li>
+                <span>Teilnahme WM U20 3000m H - Oregon, USA (2014)</span>
+              </li>
+              <li>
+                <span>Finalistin EM U20 3000m H - Eskilstuna, SWE (2015)</span>
+              </li>
+              <li>
+                <span>Teilnahme EM U23 10.000, 5000m - POL (2017)</span>
+              </li>
+              <li><span>Siegerin Essen Marathon - (2021)</span></li>
+              <li><span>Team Gold im Marathon - EM München (2022)</span></li>
+              <li>
+                <span>Zahlreiche Medaillen bei kroatischen Meisterschaften</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sponsors">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-4 col-xl">
+            <a href="https://www.asics.com/de/de-de/" target="_blank" class="image">
+              <img src="../assets/svg/sponsors/asics.svg" alt="Logo von Asics" class="img-fluid" />
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-xl">
+            <a href="https://www.swrc.de/" target="_blank" class="image">
+              <img src="../assets/svg/sponsors/stadtwerke.svg" alt="Logo der Stadtwerke Reichenbach"
+                class="img-fluid" />
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-xl">
+            <a href="https://datec-gmbh.de/" target="_blank" class="image">
+              <img src="../assets/svg/sponsors/datec.svg" alt="Logo von Datec" class="img-fluid" />
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-xl">
+            <a href="https://www.mietens.com/" target="_blank" class="image">
+              <img src="../assets/svg/sponsors/mietens.svg" alt="Logo von Mietens"
+                class="img-fluid" />
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-xl">
+            <a href="https://sponser.de/" target="_blank" class="image">
+              <img src="../assets/svg/sponsors/sponser.svg" alt="Logo von Sponser"
+                class="img-fluid" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row align-items-stretch">
+        <div class="col-12 col-md-6">
+          <div class="h-100 d-flex flex-column align-items-start justify-content-between">
+            <p>
+              <img src="../assets/svg/logo.svg" alt="Logo" class="img-fluid logo" />
+            </p>
+            <p class="copyright">© 2023 Hendel-Running</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="about-us.html">Über uns</a>
+              <a class="nav-link link-light" href="index.html">Startseite</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="kristina.html">Kristina</a>
+              <a class="nav-link link-light" href="about-us.html">Über uns</a>
+              <a href="https://www.facebook.com/hendelrunning" aria-label="Facebook Hendel Running">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-facebook" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="sebastian.html">Sebastian</a>
+              <a class="nav-link link-light" href="kristina.html">Kristina</a>
+              <a class="me-2" href="https://www.instagram.com/kristina_hendel_"
+                aria-label="Instagram Kristina Hendel">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-instagram" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                </svg></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Kontakt</a>
+              <a class="nav-link link-light" href="sebastian.html">Sebastian</a>
+              <a class="me-2" href="https://www.instagram.com/sebastian_hendel"
+                aria-label="Instagram Sebastian Hendel">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-instagram" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                </svg></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link link-light" href="contact.html">Kontakt</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-light" href="privacy-policy.html">Datenschutz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-light" href="legal-details.html">Impressum</a>
             </li>
           </ul>
         </div>
       </div>
-    </nav>
+    </div>
+  </footer>
+</body>
 
-    <main id="kristina" class="subpage">
-      <header>
-        <div class="container">
-          <h2>Superschnelle Ausdauerheldin</h2>
-          <h1>
-            <span class="fName">Kristina</span>
-            <span class="lName">Hendel</span>
-          </h1>
-        </div>
-      </header>
-
-      <section class="container">
-        <div class="row align-items-start">
-          <div class="col-sm-12 col-lg-6">
-            <div class="text animate left">
-              <h2>Anfänge</h2>
-              <p>
-                Kristina Božić – so ihr Mädchenname – ist in der kroatischen
-                Hauptstadt Zagreb aufgewachsen. Der Sport spielte von
-                Kindesbeinen an eine wichtige Rolle in ihrem Leben. Allerdings
-                fand sie erst über Umwege zur Leichtathletik. Mit neun Jahren
-                begann Kristina zunächst Tennis zu spielen und bewies auch dabei
-                einiges Talent. Doch schnell zeigte sich, dass sie besondere
-                läuferische Stärken hat, und so wechselte sie 2008, im Alter von
-                zwölf Jahren, zu den Leichtathleten. Schnell zeigte sich, dass
-                ihr die längeren Strecken besonders liegen. Nur kurze Zeit
-                später zählte sie zu den besten Langstreckenläuferinnen
-                Kroatiens. Die ersten Erfolge ließen nicht lange auf sich
-                warten. 2012, im Alter von 16 Jahren, startete sie in Barcelona
-                zum ersten Mal bei einer U-20-Weltmeisterschaft über 3000 Meter
-                Hindernis. 2013, mit gerade einmal 17 Jahren, gewann Kristina im
-                3000-Meter-Hindernislauf ihren ersten nationalen Titel. Schon im
-                Jahr zuvor war sie auf dieser Strecke kroatische Vizemeisterin
-                gewesen.
-              </p>
-            </div>
-            <div
-              class="col-sm-12 col-lg-6 blob blob-right image d-lg-none d-flex justify-content-center"
-            >
-              <img
-                id="sebastian-full"
-                class="img-fluid animate"
-                src="../assets/img/no-bg/002_ret-sw.webp"
-                alt="Sebastian Hendel im Trainingsanzug, Ganzkörperaufnahme"
-              />
-            </div>
-            <div class="text animate left">
-              <h2>Nationale Spitze</h2>
-              <p>
-                2014 startete Kristina Hendel zum dritten Mal bei den
-                kroatischen Meisterschaften im 3000-Meter-Hindernislauf und
-                verteidigte dabei den im Vorjahr errungenen Titel. Während ihres
-                ersten Studiensemesters 2015 am Iona College in New York
-                konzentrierte sie sich zunächst auf den Crosslauf, merkte aber
-                schnell, dass das nicht das Richtige für sie ist. Das neue
-                Umfeld und neue Trainingsmethoden sollten dennoch schnell zu
-                gewachsenem Leistungsvermögen führen. So verbesserte sie während
-                des Studiums den kroatischen Jugendrekord über 3000 Meter in der
-                Halle. Auch nach ihrer Hochzeit, dem Umzug nach Deutschland
-                sowie der Geburt ihres Sohnes Jonathan im Oktober 2016 startete
-                Kristina Hendel weiterhin für Kroatien. Im
-                3000-Meter-Hindernislauf hält sie bis heute mit 10:02:20 Minuten
-                den Landesrekord, den sie 2018 als gerade einmal 22-Jährige im
-                belgischen Oordegem aufgestellt hatte. Auch über 3000 Meter,
-                5000 Meter und 10.000 Meter gehört sie seit Jahren zu den Besten
-                ihres Landes.
-              </p>
-            </div>
-          </div>
-          <div
-            class="col-sm-12 col-lg-6 blob blob-right image d-none d-lg-flex"
-          >
-            <img
-              class="img-fluid animate"
-              src="../assets/img/no-bg/002_ret-sw.webp"
-              alt="Sebastian Hendel im Trainingsanzug, Ganzkörperaufnahme"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section class="container">
-        <div class="row align-items-start">
-          <div
-            class="col-sm-12 col-lg-6 blob blob-left image justify-content-center justify-content-lg-start d-none d-lg-flex"
-          >
-            <img
-              class="img-fluid animate"
-              src="../assets/img/no-bg/134_ret-sw.webp"
-              alt="Sebastian Hendel im Laufschritt, Ganzkörperaufnahme"
-            />
-          </div>
-          <div class="col-sm-12 col-lg-6">
-            <div class="text animate right">
-              <h2>Mutterschaft und Spitzensport</h2>
-              <p>
-                Wenn sich Kristina etwas in den Kopf gesetzt hat, dann ist es
-                nicht so leicht, sie von ihrem Entschluss abzubringen. Ihren
-                Dickkopf bewies sie auch im Herbst 2016, als sie schon kurz nach
-                der Geburt ihres Sohnes den ärztlichen Rat in den Wind schlug
-                und sehr schnell wieder ins Training einstieg. In kurzer Zeit
-                erreichte sie wieder eine bestechende Form. Nur ein halbes Jahr
-                nach der Geburt, im April 2017 verbesserte sie beim City-Lauf in
-                Korschenbroich ihren persönlichen Rekord über 5000 Meter um über
-                eine Minute. Im selben  Monat wurde sie in persönlicher Bestzeit
-                kroatische Meisterin über 10.000 Meter. Bei den folgenden
-                U-23-Europameisterschaften in Polen lief sie über 5000 Meter auf
-                Platz 11 und über 10.000 Meter auf Platz 15. Inzwischen hat
-                Kristina Hendel, die seit 2021 auch einen deutschen Pass
-                besitzt, den Marathon für sich entdeckt. Gleich bei ihrer
-                Marathonpremiere 2021 in Essen siegte sie mit Streckenrekord von
-                2:27,30 Stunden. Eine Zeit, die sie beim Hamburg-Marathon 2022
-                als Fünfte noch um eine Sekunde verbessern konnte.
-              </p>
-            </div>
-            <div
-              class="col-sm-12 col-lg-6 blob blob-left image justify-content-center justify-content-lg-start d-lg-none"
-            >
-              <img
-                class="img-fluid animate"
-                src="../assets/img/no-bg/134_ret-sw.webp"
-                alt="Sebastian Hendel im Laufschritt, Ganzkörperaufnahme"
-              />
-            </div>
-            <div class="text animate right">
-              <h2>Gold-Debüt im deutschen Trikot</h2>
-              <p>
-                Am 15. August gab Kristina bei der EM in München ihr Debüt im
-                Trikot der deutschen Nationalmannschaft. Und was für eines! Sie
-                holte mit dem deutschen Team die Goldmedaille im
-                Marathon-Mannschaftswettbewerb! Und das, obwohl Kristina ab
-                Kilometer 15 Schmerzen wegen eines eingeklemmten Nervs in der
-                Hüfte plagten, der ihr schon in der Vorbereitung zu schaffen
-                machte. Dennoch lief sie auf einem unter diesen Umständen
-                respektablen 20. Platz in der Einzelwertung ins Ziel. Mit ihren
-                Leistungen hat sie auch die Herzen der Vogtländer im Sturm
-                erobert. Die wählten sie bei der Umfrage nach den Sportlerinnen
-                des Jahres 2022 auf den dritten Platz.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="leistungen">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-xl-6">
-              <h2>Bestleistungen</h2>
-              <ul>
-                <li>
-                  <span>3000m H</span>
-                  <span>10:02,20 min</span>
-                  <span>Oordegem, BEL (2018)</span>
-                </li>
-                <li>
-                  <span>5km</span>
-                  <span>15:52 min</span>
-                  <span>Angers, FRA (2021)</span>
-                </li>
-                <li>
-                  <span>10km</span>
-                  <span>32:35 min</span>
-                  <span>Berlin (2022)</span>
-                </li>
-                <li>
-                  <span>Halbmarathon</span>
-                  <span>70:36 min</span>
-                  <span>Istanbul, TUR (2021)</span>
-                </li>
-                <li>
-                  <span>Marathon</span>
-                  <span>2:27:29 h</span>
-                  <span>Hamburg (2022)</span>
-                </li>
-              </ul>
-            </div>
-            <div class="col-sm-12 col-xl-6">
-              <h2>Erfolge</h2>
-              <ul>
-                <li>
-                  <span>Teilnahme WM U20 3000m H - Barcelona, ESP (2012)</span>
-                </li>
-                <li>
-                  <span>Finalistin WM U18 2000m H - Donezk, UKR (2013)</span>
-                </li>
-                <li>
-                  <span>Teilnahme EM U20 3000m H - Rieti, ITA (2013)</span>
-                </li>
-                <li>
-                  <span>Teilnahme WM U20 3000m H - Oregon, USA (2014)</span>
-                </li>
-                <li>
-                  <span
-                    >Finalistin EM U20 3000m H - Eskilstuna, SWE (2015)</span
-                  >
-                </li>
-                <li>
-                  <span>Teilnahme EM U23 10.000, 5000m - POL (2017)</span>
-                </li>
-                <li><span>Siegerin Essen Marathon - (2021)</span></li>
-                <li><span>Team Gold im Marathon - EM München (2022)</span></li>
-                <li>
-                  <span
-                    >Zahlreiche Medaillen bei kroatischen Meisterschaften</span
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="sponsors">
-        <div class="container">
-          <div class="row">
-            <div class="col-6 col-md-4 col-xl">
-              <a
-                href="https://www.asics.com/de/de-de/"
-                target="_blank"
-                class="image"
-              >
-                <img
-                  src="../assets/svg/sponsors/asics.svg"
-                  alt="Logo von Asics"
-                  class="img-fluid"
-                />
-              </a>
-            </div>
-            <div class="col-6 col-md-4 col-xl">
-              <a href="https://www.swrc.de/" target="_blank" class="image">
-                <img
-                  src="../assets/svg/sponsors/stadtwerke.svg"
-                  alt="Logo der Stadtwerke Reichenbach"
-                  class="img-fluid"
-                />
-              </a>
-            </div>
-            <div class="col-6 col-md-4 col-xl">
-              <a href="https://datec-gmbh.de/" target="_blank" class="image">
-                <img
-                  src="../assets/svg/sponsors/datec.svg"
-                  alt="Logo von Datec"
-                  class="img-fluid"
-                />
-              </a>
-            </div>
-            <div class="col-6 col-md-4 col-xl">
-              <a href="https://www.mietens.com/" target="_blank" class="image">
-                <img
-                  src="../assets/svg/sponsors/mietens.svg"
-                  alt="Logo von Mietens"
-                  class="img-fluid"
-                />
-              </a>
-            </div>
-            <div class="col-6 col-md-4 col-xl">
-              <a href="https://sponser.de/" target="_blank" class="image">
-                <img
-                  src="../assets/svg/sponsors/sponser.svg"
-                  alt="Logo von Sponser"
-                  class="img-fluid"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="container">
-        <div class="row align-items-stretch">
-          <div class="col-12 col-md-6">
-            <div
-              class="h-100 d-flex flex-column align-items-start justify-content-between"
-            >
-              <p>
-                <img
-                  src="../assets/svg/logo.svg"
-                  alt="Logo"
-                  class="img-fluid logo"
-                />
-              </p>
-              <p class="copyright">© 2023 Hendel-Running</p>
-            </div>
-          </div>
-          <div class="col-6 col-md-3">
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link link-light" href="index.html">Startseite</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link link-light" href="about-us.html">Über uns</a>
-                <a
-                  href="https://www.facebook.com/hendelrunning"
-                  aria-label="Facebook Hendel Running"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-facebook"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
-                    />
-                  </svg>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link link-light" href="kristina.html">Kristina</a>
-                <a
-                  class="me-2"
-                  href="https://www.instagram.com/kristina_hendel_"
-                  aria-label="Instagram Kristina Hendel"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-instagram"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
-                    /></svg
-                ></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link link-light" href="sebastian.html"
-                  >Sebastian</a
-                >
-                <a
-                  class="me-2"
-                  href="https://www.instagram.com/sebastian_hendel"
-                  aria-label="Instagram Sebastian Hendel"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-instagram"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
-                    /></svg
-                ></a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-3">
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link link-light" href="contact.html">Kontakt</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link link-light" href="privacy-policy.html"
-                  >Datenschutz</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link link-light" href="legal-details.html"
-                  >Impressum</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
 </html>
